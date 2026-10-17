@@ -1,75 +1,81 @@
-# React + TypeScript + Vite
+# Tuition App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A mobile-first web app for private tutors in India to keep track of students, batches and monthly fees, and to remind parents on WhatsApp.
 
-Currently, two official plugins are available:
+It runs entirely in the browser. There's no account and no server: all data stays on the tutor's own phone, with a backup file to move or restore it.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## What it does
 
-## React Compiler
+**Fees**
+- See each month's fees by batch, with a Collected / Due now / Upcoming summary.
+- Each student has a joining date and a fee due day. A month's fee shows as **Paid**, **Due** or **Upcoming**.
+- Mark paid with one tap (with Undo).
+- Send a WhatsApp reminder pre-filled with the amount, due date and a UPI payment link.
+- **Message batch:** write one message (or start from a template) and send it to every guardian in a batch, one by one, or copy it for a WhatsApp group.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+**Students**
+- Search by student or guardian name, and filter by batch.
+- Add, edit and delete students. Fees for a new student start from the month they joined.
+- Mark a student as **left**: they drop off later months, but their fee history is kept.
+- On Android Chrome, pick a guardian's number straight from the phone's contacts.
+- Manage batches: add, rename, and delete (moving the students to another batch first).
 
-## Expanding the ESLint configuration
+**Settings**
+- Your name, phone and UPI ID, with a ₹1 test link to check the UPI ID works.
+- An editable reminder message with placeholders like `{studentName}` and `{dueDate}`, and a live preview.
+- A default fee and due day for new students.
+- Export and restore a JSON backup, and delete all data.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+**Built for phones**
+- One-handed layout with a bottom navigation and the main actions at thumb height.
+- Can be installed to the home screen.
+- Accessible: visible labels, errors linked to their fields, status messages announced to screen readers, keyboard support and 44px+ tap targets. Status is always shown as a word, never by colour alone.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Getting started
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+You'll need Node.js 20.19+ or 22.12+ (what Vite requires).
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+```bash
+npm install
+npm run dev       # start the dev server at http://localhost:5173
+npm run build     # type-check and build into dist/
+npm run lint      # ESLint
+npm run preview   # serve the production build locally
 ```
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
+**To try it on your phone,** run `npx vite --host` and open the **Network** address it prints, with the phone on the same Wi-Fi as your computer.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+The contact picker only works on a secure address (HTTPS or `localhost`). To test it on Android, either host the app on HTTPS or use Chrome's USB port forwarding (`chrome://inspect`) to open `localhost:5173` on the phone.
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## Deploying
+
+The build is a static site with no server and no URL routing, so `dist/` can be served from any static host: GitHub Pages, Netlify, Vercel or Cloudflare Pages. HTTPS is needed for the contact picker and for the browser's clipboard API.
+
+## Tech stack
+
+- React 19 and TypeScript, built with Vite
+- Plain CSS with design tokens (no UI framework)
+- [lucide-react](https://lucide.dev) icons and the [Mukta](https://fonts.google.com/specimen/Mukta) typeface
+- Browser `localStorage` for data, with a versioned record and migrations
+
+## Project structure
 
 ```
+src/
+  App.tsx            screen state, history navigation, saving
+  screens/           Setup, Fees (Home), Students, Student form, Batches,
+                     Message batch, Settings
+  components/        shared UI: fields, bottom nav, tabs, toast, chapter band
+  lib/               data model and validation, fee logic, messages, contacts
+```
+
+## Documentation
+
+- [flow.md](flow.md): how the app fits together, screen by screen, and the data format
+- [decisions.md](decisions.md): why things are built the way they are, with the alternatives considered
+- [DESIGN.md](DESIGN.md): the visual design system
+- [PRODUCT.md](PRODUCT.md): who the app is for and what's in scope
+
+## Privacy
+
+The app never sends data anywhere. Everything is stored in the browser on the device where it's used. Reminders and batch messages open WhatsApp with the text filled in, and the tutor sends them herself. A backup file holds guardians' names and phone numbers, so keep it somewhere safe.
