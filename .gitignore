@@ -25,3 +25,7 @@ dist-ssr
 
 # Personal Claude Code settings
 .claude/settings.local.json
+
+# /brag launch videos
+brag-output/
+brag-output-*/
