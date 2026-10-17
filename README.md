@@ -4,6 +4,15 @@ A mobile-first web app for private tutors in India to keep track of students, ba
 
 It runs entirely in the browser. There's no account and no server: all data stays on the tutor's own phone, with a backup file to move or restore it.
 
+<p align="center">
+  <img src="docs/screenshots/fees.png" alt="Fees screen for October 2026: Collected ₹3,500, Due now ₹5,300, Upcoming ₹3,800, with the Morning batch showing two students marked Due, each with Remind and Mark paid buttons" width="220">
+  <img src="docs/screenshots/students.png" alt="Students screen with a search field, batch filter, a Show students who left checkbox, and a list of students with class, batch, monthly fee and due day" width="220">
+  <img src="docs/screenshots/message-batch.png" alt="Message batch screen for the Morning batch: goes to 4 guardians, quick templates, and a message saying the class is cancelled tomorrow, with Copy message and Send one by one buttons" width="220">
+  <img src="docs/screenshots/settings-reminder.png" alt="Settings screen, Reminder message section: placeholder buttons such as {studentName} and {dueDate} above an editable reminder template" width="220">
+</p>
+
+<p align="center"><sub>Fees · Students · Message batch · Settings (screenshots use made-up demo data)</sub></p>
+
 ## What it does
 
 **Fees**

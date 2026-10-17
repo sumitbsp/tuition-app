@@ -586,6 +586,7 @@ fieldset.section > legend.group-title {
 
 .text-area {
   height: auto;
+  font-family: inherit; /* textareas default to monospace */
   min-height: 11rem;
   padding: 12px 14px;
   line-height: 1.45;
