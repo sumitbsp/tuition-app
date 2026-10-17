@@ -1,0 +1,73 @@
+/* Bottom navigation: Fees · Students · Settings. Fixed under the page, with a page-white
+   ground and a hairline rule, like the form dock. */
+html:has(.bottom-nav) {
+  --nav-h: 64px;
+}
+
+.bottom-nav {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 20;
+  padding-bottom: env(safe-area-inset-bottom);
+  background: var(--page);
+  border-top: 1px solid var(--rule-soft);
+  view-transition-name: bottom-nav;
+}
+
+.bottom-nav-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  max-width: var(--column);
+  height: var(--nav-h);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+  list-style: none;
+}
+
+.bottom-nav-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  width: 100%;
+  height: 100%;
+  min-height: var(--tap);
+  border: 0;
+  border-radius: var(--radius);
+  background: transparent;
+  color: var(--ink-muted);
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.2;
+  cursor: pointer;
+  transition: background-color 160ms var(--ease-out);
+}
+
+.bottom-nav-item:hover {
+  background: var(--teal-50);
+}
+
+.bottom-nav-item:focus-visible {
+  outline-offset: -2px;
+}
+
+/* Current tab: teal, heavier, with a bar on top. Never colour alone: weight and bar too. */
+.bottom-nav-item[aria-current='page'] {
+  color: var(--teal-900);
+  font-weight: 800;
+}
+
+.bottom-nav-item[aria-current='page']::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 25%;
+  right: 25%;
+  height: 3px;
+  border-radius: 0 0 2px 2px;
+  background: var(--teal);
+}

@@ -1,0 +1,61 @@
+/* Active / Left, then Delete: below the form, away from Save, each asking inline before acting. */
+.status-zone {
+  margin-top: 36px;
+  padding-top: 20px;
+  border-top: 1px solid var(--rule-soft);
+}
+
+.status-left {
+  margin-bottom: 12px;
+  font-size: 0.9375rem;
+  line-height: 1.45;
+}
+
+.status-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 16px;
+}
+
+.left-confirm {
+  padding: 14px;
+  background: var(--teal-50);
+  border-radius: var(--radius);
+  animation: confirm-open 200ms var(--ease-out);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .left-confirm {
+    animation: none;
+  }
+}
+
+.delete-zone {
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid var(--rule-soft);
+}
+
+.delete-suggest {
+  margin-top: 6px;
+}
+
+.delete-instead {
+  margin-top: 8px;
+}
+
+/* "+ New batch" sits directly under the Batch picker */
+.new-batch {
+  margin-top: 6px;
+}
+
+/* "Pick from contacts" sits directly under the Guardian phone field (Android Chrome only) */
+.contact-pick {
+  margin-top: 6px;
+}
+
+/* "Same as joining day" sits directly under the Fee due on field */
+.due-shortcut {
+  margin-top: 6px;
+}

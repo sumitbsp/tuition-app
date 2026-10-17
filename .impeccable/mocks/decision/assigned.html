@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Hind:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:390px;height:844px;overflow:hidden}
+body{background:#CFE0EE;color:#1B1F2A;font-family:Hind,system-ui,sans-serif;position:relative}
+.sheet{padding:28px 20px 0}
+.top{display:flex;justify-content:space-between;align-items:flex-start;gap:16px}
+.kicker{font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#1D3F8F}
+h1{font-size:30px;line-height:1.08;font-weight:700;color:#1D3F8F;margin-top:10px;letter-spacing:-.01em}
+.sub{font-size:16px;line-height:1.4;margin-top:10px;color:#2A3550}
+.stamp{flex:none;width:64px;height:76px;border:1.5px dashed #D71A21;display:grid;place-items:center;color:#D71A21;font-weight:700;font-size:24px;margin-top:4px}
+.stamp small{display:block;font-size:9px;letter-spacing:.1em;font-weight:600;text-align:center;margin-top:-18px}
+.fold{border-top:1px dashed #1D3F8F;opacity:.45;margin:22px -20px 18px}
+.field{margin-bottom:18px}
+label{display:block;font-size:14px;font-weight:600;color:#1D3F8F}
+label em{font-style:normal;font-weight:400;color:#4A5878}
+.line{font-size:19px;padding:8px 0 6px;border-bottom:1px solid #1D3F8F;min-height:40px}
+.line.empty{border-bottom-style:dotted;color:#6C7A98}
+.help{font-size:13px;color:#3E4B6A;margin-top:6px;line-height:1.35}
+.err{font-size:13px;color:#D71A21;margin-top:6px;font-weight:500}
+.batch{display:flex;align-items:center;gap:12px}
+.batch .line{flex:1}
+.x{width:44px;height:44px;display:grid;place-items:center;color:#1D3F8F;font-size:22px}
+.add{margin-top:6px;height:44px;display:inline-flex;align-items:center;font-weight:600;font-size:16px;color:#1D3F8F}
+.dock{position:absolute;left:0;right:0;bottom:0;padding:14px 20px 28px;background:#CFE0EE;border-top:1px solid rgba(29,63,143,.35)}
+.cta{height:56px;background:#1D3F8F;color:#fff;font-size:18px;font-weight:600;display:grid;place-items:center}
+.missing{font-size:13px;color:#3E4B6A;margin-top:8px;text-align:center}
+</style></head><body>
+<div class="sheet">
+  <div class="top">
+    <div>
+      <div class="kicker">First launch</div>
+      <h1>Welcome! Let's set up your tuition app.</h1>
+      <p class="sub">About a minute. You can change all of this later.</p>
+    </div>
+    <div class="stamp">RS<small>FROM</small></div>
+  </div>
+  <div class="fold"></div>
+
+  <div class="field"><label>Your name</label><div class="line">Ritu Sharma</div>
+    <p class="help">Signs your reminder messages.</p></div>
+
+  <div class="field"><label>Phone number</label><div class="line">98765 4321</div>
+    <p class="err">Enter a 10-digit mobile number.</p></div>
+
+  <div class="field"><label>UPI ID <em>(optional)</em></label><div class="line empty">e.g. ritu@okaxis</div>
+    <p class="help">You can add this later in Settings. It adds a payment link to reminders.</p></div>
+
+  <div class="field"><label>Batches</label>
+    <div class="batch"><div class="line">Evening – Class 8</div><div class="x">×</div></div>
+    <div class="batch"><div class="line empty">e.g. Morning – Class 10</div><div class="x">×</div></div>
+    <div class="add">+ Add another batch</div>
+  </div>
+</div>
+<div class="dock">
+  <div class="cta">Get started</div>
+  <p class="missing">Fix the phone number to continue</p>
+</div>
+</body></html>

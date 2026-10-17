@@ -1,0 +1,84 @@
+/* Batches */
+.batches > legend {
+  float: left;
+  width: 100%;
+}
+
+.batches > legend + * {
+  clear: both;
+}
+
+.batches-help {
+  margin-bottom: 14px;
+}
+
+.batch-row {
+  display: grid;
+  grid-template-rows: 1fr;
+}
+
+.batch-row-inner {
+  min-height: 0;
+  padding-bottom: 14px;
+}
+
+.batch-row.is-entering .batch-row-inner,
+.batch-row.is-leaving .batch-row-inner {
+  overflow: hidden;
+}
+
+.batch-row.is-entering {
+  animation: batch-unroll 280ms var(--ease-out);
+}
+
+.batch-row.is-leaving {
+  animation: batch-roll-up 200ms var(--ease-out) forwards;
+}
+
+@keyframes batch-unroll {
+  from {
+    grid-template-rows: 0fr;
+    opacity: 0;
+  }
+  to {
+    grid-template-rows: 1fr;
+    opacity: 1;
+  }
+}
+
+@keyframes batch-roll-up {
+  from {
+    grid-template-rows: 1fr;
+    opacity: 1;
+  }
+  to {
+    grid-template-rows: 0fr;
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .batch-row.is-entering,
+  .batch-row.is-leaving {
+    animation: none;
+  }
+}
+
+.batch-label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--ink-muted);
+}
+
+.batch-field {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.batch-field .text-input {
+  flex: 1;
+  min-width: 0;
+}

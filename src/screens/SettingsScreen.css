@@ -1,0 +1,134 @@
+/* Settings: five numbered sections, each saved on its own.
+   .home-flash comes from HomeScreen.css, as on Students and Manage batches. */
+.settings {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}
+
+.settings-body {
+  flex: 1;
+  padding: 12px var(--gutter) calc(40px + var(--nav-h) + env(safe-area-inset-bottom));
+}
+
+.settings-section + .settings-section {
+  margin-top: 40px;
+  padding-top: 28px;
+  border-top: 1px solid var(--rule-soft);
+}
+
+/* The number sits on the title's first line, below the rule */
+.settings-section + .settings-section > .group-title .section-num {
+  top: 33px;
+}
+
+.settings-focus-title:focus {
+  outline: none;
+}
+
+.settings-intro {
+  margin: -6px 0 14px;
+}
+
+.settings-actions {
+  margin-top: 20px;
+}
+
+.settings-status.is-error {
+  color: var(--error);
+}
+
+.settings-unsaved {
+  color: var(--marigold-ink);
+}
+
+/* 1 Your details */
+.settings-test-pay {
+  margin-top: 12px;
+}
+
+.settings-test-pay .add-button {
+  text-decoration: none;
+}
+
+.settings-test-pay .help {
+  margin-top: 2px;
+}
+
+/* 2 Reminder message */
+.placeholder-list {
+  margin-bottom: 16px;
+}
+
+.placeholder-chip {
+  min-height: var(--tap);
+  padding: 0 10px;
+  font-size: 0.9375rem;
+}
+
+.reminder-preview {
+  padding: 12px 14px;
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  background: var(--teal-50);
+  font-size: 0.9375rem;
+  line-height: 1.45;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.settings-warn {
+  font-weight: 600;
+  color: var(--marigold-ink);
+}
+
+.settings-reset {
+  margin-bottom: 8px;
+}
+
+/* 4 Backup */
+.settings-last-export {
+  font-weight: 600;
+}
+
+.settings-backup-note {
+  margin-top: 10px;
+}
+
+.settings-backup-actions {
+  display: grid;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.settings-icon-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.settings-confirm {
+  margin-top: 16px;
+}
+
+.settings-confirm-detail {
+  margin-top: 6px;
+  font-size: 0.9375rem;
+  line-height: 1.45;
+}
+
+.delete-confirm .field {
+  margin-top: 14px;
+}
+
+.delete-confirm .add-button {
+  margin-top: 8px;
+}
+
+/* Delete everything stays pressable until DELETE is typed, so pressing it can explain why */
+.button-danger[aria-disabled='true'] {
+  background: var(--rule-soft);
+  color: var(--ink-muted);
+  cursor: not-allowed;
+}

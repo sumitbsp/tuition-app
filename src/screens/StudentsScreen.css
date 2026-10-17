@@ -1,0 +1,160 @@
+/* Students: search, batch filter and the full roster. On the page edge (no hang on lists).
+   .home-flash comes from HomeScreen.css, as on Manage batches. */
+.roster {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}
+
+.roster-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 12px var(--gutter) calc(32px + var(--nav-h) + env(safe-area-inset-bottom));
+}
+
+.roster-filters {
+  display: grid;
+  gap: 16px;
+}
+
+.roster-filters .field + .field {
+  margin-top: 0;
+}
+
+/* Native checkbox, enlarged to a full tap target with its label */
+.roster-toggle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: var(--tap);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.roster-toggle input {
+  flex: none;
+  width: 22px;
+  height: 22px;
+  margin: 0;
+  accent-color: var(--teal);
+  cursor: pointer;
+}
+
+.roster-count-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 20px;
+  margin-bottom: 4px;
+}
+
+.roster-count {
+  color: var(--ink-muted);
+  font-size: 0.9375rem;
+  font-weight: 600;
+}
+
+.roster-count-row .add-button {
+  flex: none;
+  margin-left: 0;
+  margin-right: -8px;
+}
+
+.roster-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid var(--rule-soft);
+}
+
+.roster-list > li {
+  border-bottom: 1px solid var(--rule-soft);
+}
+
+/* The whole row opens the edit form */
+.roster-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  width: calc(100% + 16px);
+  min-height: var(--tap);
+  margin: 0 -8px;
+  padding: 10px 36px 12px 8px;
+  border: 0;
+  border-radius: var(--radius);
+  background: transparent;
+  text-align: left;
+  cursor: pointer;
+  transition: background-color 160ms var(--ease-out);
+}
+
+.roster-item:hover {
+  background: var(--teal-50);
+}
+
+.roster-item:active {
+  background: var(--teal-100);
+}
+
+.roster-item:focus-visible {
+  outline-offset: -2px;
+}
+
+.roster-name {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  font-size: 1.0625rem;
+  font-weight: 600;
+  line-height: 1.3;
+  overflow-wrap: anywhere;
+}
+
+.roster-item.is-left .roster-name {
+  color: var(--ink-muted);
+}
+
+/* A word, not a colour: outlined like the quiet badges on Fees */
+.roster-left-badge {
+  padding: 1px 7px;
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  color: var(--ink-muted);
+  font-size: 0.8125rem;
+  font-weight: 600;
+}
+
+.roster-meta {
+  font-size: 0.9375rem;
+  color: var(--ink-muted);
+}
+
+.roster-fee {
+  font-weight: 600;
+  color: var(--ink);
+  font-variant-numeric: tabular-nums;
+}
+
+.roster-cue {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  translate: 0 -50%;
+  color: var(--teal);
+}
+
+.roster-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.roster-manage {
+  align-self: flex-start;
+  margin-top: 20px;
+}

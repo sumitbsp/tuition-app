@@ -1,0 +1,134 @@
+.batches-body {
+  padding-top: 12px;
+}
+
+.manage-heading {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin-bottom: 8px;
+  font-size: 1.25rem;
+  font-weight: 800;
+}
+
+.manage-heading:focus {
+  outline: none;
+}
+
+.manage-heading-count {
+  color: var(--teal);
+  font-variant-numeric: tabular-nums;
+}
+
+/* On the page edge, like Home's batch groups (no hang on lists). */
+.manage-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid var(--rule-soft);
+}
+
+.manage-item {
+  border-bottom: 1px solid var(--rule-soft);
+}
+
+/* Padding lives inside so the roll-shut collapses it too */
+.manage-item-inner {
+  padding: 8px 0;
+}
+
+.manage-row {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* The whole name area renames the batch */
+.manage-open {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 56px;
+  margin-left: -8px;
+  padding: 6px 8px;
+  border: 0;
+  border-radius: var(--radius);
+  background: transparent;
+  text-align: left;
+  cursor: pointer;
+  transition: background-color 160ms var(--ease-out);
+}
+
+.manage-open:hover {
+  background: var(--teal-50);
+}
+
+.manage-open:active {
+  background: var(--teal-100);
+}
+
+.manage-open:focus-visible {
+  outline-offset: -2px;
+}
+
+.manage-name {
+  flex: 1;
+  min-width: 0;
+  text-wrap: balance;
+  font-size: 1.0625rem;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+.manage-count {
+  flex: none;
+  font-size: 0.9375rem;
+  color: var(--ink-muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.manage-cue {
+  flex: none;
+  color: var(--ink-muted);
+}
+
+.manage-open:hover .manage-cue {
+  color: var(--teal);
+}
+
+.manage-delete[aria-expanded='true'] {
+  background: var(--error-50);
+  color: var(--error);
+}
+
+.manage-delete:hover {
+  color: var(--error);
+  background: var(--error-50);
+}
+
+.manage-confirm {
+  margin: 4px 0 6px;
+}
+
+/* "Move and delete" needs more room than "Cancel" to stay on one line */
+.manage-confirm .delete-confirm-actions {
+  grid-template-columns: 1fr 1.6fr;
+}
+
+.manage-move {
+  margin-top: 12px;
+}
+
+.manage-move .field + .field {
+  margin-top: 0;
+}
+
+.manage-note {
+  margin-top: 12px;
+}
+
+.manage-add {
+  margin-top: 16px;
+}

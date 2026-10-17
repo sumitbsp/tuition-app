@@ -1,0 +1,676 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-17T20:00:00Z",
+  "title": "Design System: Tuition app",
+  "extensions": {
+    "colorMeta": {
+      "ncert-teal": {
+        "role": "primary",
+        "displayName": "NCERT Teal",
+        "canonical": "oklch(49.4% 0.081 209)",
+        "tonalRamp": [
+          "#00121d",
+          "#002e3a",
+          "#0b4f58",
+          "#0f6e7a",
+          "#3d909c",
+          "#62b3c0",
+          "#e3f2f3",
+          "#f1f8f8"
+        ]
+      },
+      "ncert-teal-deep": {
+        "role": "primary",
+        "displayName": "Deep Chapter Teal",
+        "canonical": "oklch(39.3% 0.064 209)",
+        "tonalRamp": [
+          "#001119",
+          "#002d35",
+          "#044b54",
+          "#2f6b75",
+          "#528d97",
+          "#74b1ba",
+          "#b2cfd4",
+          "#d7f5fa"
+        ]
+      },
+      "teal-wash": {
+        "role": "primary",
+        "displayName": "Teal Wash",
+        "canonical": "oklch(95.0% 0.016 202)",
+        "tonalRamp": [
+          "#040d0e",
+          "#1c2728",
+          "#384546",
+          "#576465",
+          "#788586",
+          "#9aa8a9",
+          "#c3cbcb",
+          "#e9f0f1"
+        ]
+      },
+      "teal-mist": {
+        "role": "primary",
+        "displayName": "Teal Mist",
+        "canonical": "oklch(97.4% 0.007 197)",
+        "tonalRamp": [
+          "#080c0c",
+          "#212626",
+          "#3e4343",
+          "#5d6363",
+          "#7d8484",
+          "#a0a6a6",
+          "#c6caca",
+          "#ecefef"
+        ]
+      },
+      "marigold": {
+        "role": "secondary",
+        "displayName": "Marigold",
+        "canonical": "oklch(81.4% 0.148 80)",
+        "tonalRamp": [
+          "#220000",
+          "#421800",
+          "#623700",
+          "#845700",
+          "#a87915",
+          "#cd9c43",
+          "#dec59d",
+          "#ffebc2"
+        ]
+      },
+      "marigold-tint": {
+        "role": "secondary",
+        "displayName": "Marigold Tint",
+        "canonical": "oklch(95.8% 0.042 87)",
+        "tonalRamp": [
+          "#130900",
+          "#2e240b",
+          "#4b4128",
+          "#6b6046",
+          "#8d8166",
+          "#b0a488",
+          "#cfc9ba",
+          "#f4eedf"
+        ]
+      },
+      "marigold-ink": {
+        "role": "secondary",
+        "displayName": "Marigold Ink",
+        "canonical": "oklch(38.6% 0.081 77)",
+        "tonalRamp": [
+          "#1d0300",
+          "#3a1d00",
+          "#5a3b00",
+          "#7b5b26",
+          "#9e7c48",
+          "#c29f6a",
+          "#d8c6ac",
+          "#feecd1"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "canonical": "oklch(21.8% 0.000 90)",
+        "tonalRamp": [
+          "#0b0b0b",
+          "#252525",
+          "#424242",
+          "#616161",
+          "#828282",
+          "#a5a5a5",
+          "#c9c9c9",
+          "#eeeeee"
+        ]
+      },
+      "ink-muted": {
+        "role": "neutral",
+        "displayName": "Muted Ink",
+        "canonical": "oklch(46.0% 0.018 212)",
+        "tonalRamp": [
+          "#030d10",
+          "#1b272a",
+          "#374548",
+          "#566467",
+          "#778589",
+          "#99a8ac",
+          "#c3cbcc",
+          "#e8f0f2"
+        ]
+      },
+      "ink-placeholder": {
+        "role": "neutral",
+        "displayName": "Placeholder Ink",
+        "canonical": "oklch(56.0% 0.014 203)",
+        "tonalRamp": [
+          "#050d0e",
+          "#1d2728",
+          "#394445",
+          "#586465",
+          "#798586",
+          "#9ba8a9",
+          "#c4cbcb",
+          "#e9f0f0"
+        ]
+      },
+      "rule": {
+        "role": "neutral",
+        "displayName": "Teal-Grey Rule",
+        "canonical": "oklch(76.3% 0.030 205)",
+        "tonalRamp": [
+          "#000f11",
+          "#12292c",
+          "#2f4749",
+          "#4e6669",
+          "#6e888b",
+          "#90abae",
+          "#bfccce",
+          "#e4f2f3"
+        ]
+      },
+      "rule-soft": {
+        "role": "neutral",
+        "displayName": "Soft Rule",
+        "canonical": "oklch(93.0% 0.007 209)",
+        "tonalRamp": [
+          "#080c0d",
+          "#222627",
+          "#3e4344",
+          "#5d6263",
+          "#7e8384",
+          "#a1a6a7",
+          "#c7caca",
+          "#eceff0"
+        ]
+      },
+      "error-red": {
+        "role": "error",
+        "displayName": "Red Ink",
+        "canonical": "oklch(50.1% 0.178 29)",
+        "tonalRamp": [
+          "#2d0000",
+          "#510000",
+          "#752019",
+          "#9a4238",
+          "#c06458",
+          "#e68779",
+          "#eebbb3",
+          "#ffe0d8"
+        ]
+      },
+      "error-wash": {
+        "role": "error",
+        "displayName": "Error Wash",
+        "canonical": "oklch(96.7% 0.013 23)",
+        "tonalRamp": [
+          "#100909",
+          "#2b2322",
+          "#493f3f",
+          "#695e5e",
+          "#8a7f7f",
+          "#ada2a1",
+          "#cdc7c7",
+          "#f3edec"
+        ]
+      },
+      "page": {
+        "role": "neutral",
+        "displayName": "Page White",
+        "canonical": "oklch(100.0% 0.000 90)",
+        "tonalRamp": [
+          "#0b0b0b",
+          "#252525",
+          "#424242",
+          "#616161",
+          "#828282",
+          "#a5a5a5",
+          "#c9c9c9",
+          "#eeeeee"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Chapter Numeral",
+        "purpose": "Solid marigold chapter numeral on the teal band, Setup only."
+      },
+      "headline": {
+        "displayName": "Band Headline",
+        "purpose": "White heading inside the chapter band."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "In-page headings: numbered group legends, batch names, the Manage batches heading, the empty-Home title."
+      },
+      "section-number": {
+        "displayName": "Section Number",
+        "purpose": "Teal 1.1 to 1.n in a chapter, or 1 / 2 / 3 beside a group legend, hanging in the 40px gutter."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Field and section labels, text and danger buttons, Keep and Delete."
+      },
+      "button-large": {
+        "displayName": "Large Button",
+        "purpose": "CTA and 56px secondary button text (600, 1.125rem)."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Running text (17px root)."
+      },
+      "input": {
+        "displayName": "Input",
+        "purpose": "Typed text; at least 16px so iOS does not zoom."
+      },
+      "small": {
+        "displayName": "Small",
+        "purpose": "Help text, Note boxes, CTA hint, errors, the confirmation and inline status lines (600)."
+      },
+      "caption": {
+        "displayName": "Caption",
+        "purpose": "Muted 600 label above each Setup batch row (0.875rem)."
+      }
+    },
+    "shadows": [
+      {
+        "name": "focus-halo",
+        "value": "0 0 0 3px #e3f2f3",
+        "purpose": "Input focus ring (teal-wash). State only, not elevation."
+      },
+      {
+        "name": "focus-halo-error",
+        "value": "0 0 0 3px #fdf1f0",
+        "purpose": "Focus ring on an invalid input (error-wash)."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-out",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Exponential ease-out for every entrance and transition: state changes, row unroll, band opening and chapter turn."
+      },
+      {
+        "name": "state-change",
+        "value": "160ms",
+        "purpose": "Border, fill and colour changes on hover and focus."
+      },
+      {
+        "name": "press",
+        "value": "120ms scale(0.985)",
+        "purpose": "Primary button press."
+      },
+      {
+        "name": "row-unroll",
+        "value": "280ms ease-out; keyframes row-unroll: grid-template-rows 0fr to 1fr + opacity; shared utility row-motion.is-entering, child overflow hidden only while moving",
+        "purpose": "Signature: a new repeated row unrolls in place and takes focus; Manage batches rows unroll when added. Removed under prefers-reduced-motion."
+      },
+      {
+        "name": "row-roll-shut",
+        "value": "200ms ease-in forwards; keyframes row-roll-up: grid-template-rows 1fr to 0fr + opacity; shared utility row-motion.is-leaving, child overflow hidden only while moving",
+        "purpose": "Signature: a removed row rolls shut; on Manage batches the delete commits when the roll-up ends. Removed under prefers-reduced-motion (delete commits at once)."
+      },
+      {
+        "name": "inline-editor-open",
+        "value": "280ms ease-out; row-unroll (grid-template-rows 0fr to 1fr + opacity) on the wrapper; clip-while-moving (overflow hidden for 280ms) on the panel",
+        "purpose": "The Inline Name Editor unrolls open in place. No animation under prefers-reduced-motion."
+      },
+      {
+        "name": "exit",
+        "value": "ease-in",
+        "purpose": "Exits in the chapter turn (old headline and numeral); always shorter than the entrance that follows."
+      },
+      {
+        "name": "band-opening",
+        "value": "band unroll 520ms clip-path inset(0 0 100% 0) to inset(0); text settle 520ms +140ms translateY(12px) + opacity; numeral print 480ms +300ms clip-path inset(100% 0 0 0) to inset(0); all ease-out",
+        "purpose": "First-launch chapter opening (about 780ms). Never blocks input. Reduced motion: headline and numeral fade in 240ms, no clip or rise."
+      },
+      {
+        "name": "chapter-turn",
+        "value": "View Transitions; band group 420ms ease-out; old text 200ms ease-in translateY(-10px) + fade; new text 420ms ease-out +120ms from translateY(12px); old numeral 240ms ease-in to translateY(-30%); new numeral 460ms ease-out +160ms from translateY(30%); root out 180ms, in 300ms +120ms",
+        "purpose": "Setup to Home: the band holds while the chapter text turns and the Setup numeral turns out; Home has no numeral, so none turns in. Names: chapter-band, chapter-text, chapter-numeral. Reduced motion: group 0s, old 160ms fade-out, new 240ms fade-in."
+      },
+      {
+        "name": "batch-panel",
+        "value": "grid-template-rows 0fr to 1fr 280ms ease-out (open); 1fr to 0fr 200ms ease-in (close)",
+        "purpose": "Batch group panel unrolls and rolls shut. Instant under prefers-reduced-motion."
+      },
+      {
+        "name": "batch-chevron",
+        "value": "220ms rotate(180deg) ease-out",
+        "purpose": "Teal batch chevron flips when the group opens. Instant under reduced motion."
+      },
+      {
+        "name": "confirm-open",
+        "value": "200ms translateY(-4px) + opacity ease-out",
+        "purpose": "Inline delete confirm opens in place. Fade only under reduced motion."
+      },
+      {
+        "name": "fab-press",
+        "value": "120ms scale(0.96)",
+        "purpose": "Floating Add block press."
+      },
+      {
+        "name": "list-reflow",
+        "value": "View Transitions kind 'list'; rows named row-<id>; group 280ms ease-out; leaving row (old only-child) fade-out 160ms ease-in; arriving row (new only-child) fade-in 220ms ease-out; html.vt-list sets root animation none",
+        "purpose": "Rows slide into place when a row changes filter (e.g. marked paid on the Pending tab); the page doesn't crossfade. Skipped entirely under prefers-reduced-motion."
+      },
+      {
+        "name": "toast-in",
+        "value": "220ms translateY(8px) + opacity ease-out",
+        "purpose": "Toast entrance. Fade only under reduced motion. Stays 6s; timer pauses on hover or focus."
+      },
+      {
+        "name": "edit-cue-nudge",
+        "value": "160ms translate 2px 0 ease-out",
+        "purpose": "The inline ChevronRight edit cue on a student row nudges right and turns teal on hover."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "column",
+        "value": "34rem",
+        "purpose": "Single reading column max width; wider screens centre it."
+      },
+      {
+        "name": "fab-margin",
+        "value": "46rem",
+        "purpose": "From here the floating Add block moves into the right margin, 88px beyond the column edge; student rows go to one line; the toast spans the column."
+      }
+    ],
+    "focus": {
+      "value": "2px solid #0f6e7a, offset 2px",
+      "purpose": "Global :focus-visible outline. White on the teal band; teal-wash on the toast's Undo; inset 2px on full-width rows, toggles and tabs.",
+      "inputs": "Inputs use :focus (not :focus-visible) so script-focused fields show it: teal border + 3px teal-wash halo. Invalid and focused: 3px error-wash halo plus a 2px solid #b3261e outline at 2px offset.",
+      "scrollPaddingBottom": "calc(104px + env(safe-area-inset-bottom)) on Home while the Add block is shown, so focused rows stay clear of the toast and FAB."
+    },
+    "iconography": {
+      "set": "Lucide",
+      "sizes": "16px (errors, status badges, inline status), 18px (edit cues, Remind, confirmation line), 20px (text buttons, trash icon button), 22px (icon buttons), 24px (month steps)",
+      "stroke": "2 to 2.5"
+    },
+    "colorScheme": "light only, by intent",
+    "installation": {
+      "manifest": "public/manifest.webmanifest; display standalone, orientation portrait",
+      "backgroundColor": "#0f6e7a",
+      "themeColor": "#0f6e7a",
+      "icon": "Placeholder mark: solid marigold Mukta numeral 1 on a full NCERT teal field (192, 512, maskable 512, Apple touch, favicon 48). Provisional.",
+      "purpose": "The install splash and status bar read as the chapter band before the first screen paints."
+    }
+  },
+  "components": [
+    {
+      "name": "Primary Button (dock CTA)",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Full-width 56px teal action pinned in the bottom dock, with a hint line under it.",
+      "html": "<div class=\"ds-dock\"><button class=\"ds-cta\">Get started</button><p class=\"ds-cta-hint\">Add your phone number to continue.</p></div>",
+      "css": ".ds-dock { font-family: var(--font, 'Mukta', system-ui, sans-serif); background: var(--page, #ffffff); border-top: 1px solid var(--rule-soft, #e3e9ea); padding: 12px 20px 14px; } .ds-cta { font-family: var(--font, 'Mukta', system-ui, sans-serif); display: block; width: 100%; height: 56px; border: 0; border-radius: var(--radius, 6px); background: var(--teal, #0f6e7a); color: #fff; font-size: 1.125rem; font-weight: 600; cursor: pointer; transition: background-color 160ms var(--ease-out, cubic-bezier(0.16, 1, 0.3, 1)), transform 120ms var(--ease-out, cubic-bezier(0.16, 1, 0.3, 1)); } .ds-cta:hover { background: var(--teal-900, #0b4f58); } .ds-cta:active { transform: scale(0.985); } .ds-cta:focus-visible { outline: 2px solid var(--teal, #0f6e7a); outline-offset: 2px; } .ds-cta-hint { margin: 8px 0 0; text-align: center; font-size: 0.9375rem; color: var(--ink-muted, #4d5b5e); }"
+    },
+    {
+      "name": "Primary Button (disabled)",
+      "kind": "button",
+      "refersTo": "button-primary-disabled",
+      "description": "CTA while required fields are incomplete. Save student uses aria-disabled instead: identical look, but it stays pressable and pressing it reveals the errors.",
+      "html": "<button class=\"ds-cta-off\" aria-disabled=\"true\">Save student</button>",
+      "css": ".ds-cta-off, .ds-cta-off[aria-disabled=\"true\"] { font-family: var(--font, 'Mukta', system-ui, sans-serif); display: block; width: 100%; height: 56px; border: 0; border-radius: var(--radius, 6px); background: var(--rule-soft, #e3e9ea); color: var(--ink-muted, #4d5b5e); font-size: 1.125rem; font-weight: 600; cursor: not-allowed; }"
+    },
+    {
+      "name": "Text Button",
+      "kind": "button",
+      "refersTo": "button-text",
+      "description": "Teal label with a leading Lucide icon for secondary in-flow actions such as adding a row.",
+      "html": "<button class=\"ds-add\"><svg aria-hidden=\"true\" width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M5 12h14\"/><path d=\"M12 5v14\"/></svg>Add another batch</button>",
+      "css": ".ds-add { font-family: var(--font, 'Mukta', system-ui, sans-serif); display: inline-flex; align-items: center; gap: 6px; min-height: 48px; padding: 0 12px 0 8px; border: 0; border-radius: var(--radius, 6px); background: transparent; color: var(--teal, #0f6e7a); font-weight: 600; font-size: 1rem; cursor: pointer; transition: background-color 160ms var(--ease-out, cubic-bezier(0.16, 1, 0.3, 1)); } .ds-add:hover { background: var(--teal-50, #f1f8f8); } .ds-add:active { background: var(--teal-100, #e3f2f3); } .ds-add:focus-visible { outline: 2px solid var(--teal, #0f6e7a); outline-offset: 2px; }"
+    },
+    {
+      "name": "Icon Button",
+      "kind": "button",
+      "refersTo": "button-icon",
+      "description": "48px square muted Lucide icon button, e.g. remove row.",
+      "html": "<button class=\"ds-icon-btn\" aria-label=\"Remove\"><svg aria-hidden=\"true\" width=\"22\" height=\"22\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M18 6 6 18\"/><path d=\"m6 6 12 12\"/></svg></button>",
+      "css": ".ds-icon-btn { width: 48px; height: 48px; display: grid; place-items: center; padding: 0; border: 0; border-radius: var(--radius, 6px); background: transparent; color: var(--ink-muted, #4d5b5e); cursor: pointer; transition: background-color 160ms var(--ease-out, cubic-bezier(0.16, 1, 0.3, 1)), color 160ms var(--ease-out, cubic-bezier(0.16, 1, 0.3, 1)); } .ds-icon-btn:hover { background: var(--teal-50, #f1f8f8); color: var(--teal, #0f6e7a); } .ds-icon-btn:active { background: var(--teal-100, #e3f2f3); } .ds-icon-btn:focus-visible { outline: 2px solid var(--teal, #0f6e7a); outline-offset: 2px; }"
+    },
+    {
+      "name": "Numbered Section with Input",
+      "kind": "input",
+      "refersTo": "input-text",
+      "description": "Teal section number hanging in the 40px gutter, label, 52px outlined input, help text.",
+      "html": "<div class=\"ds-section\"><span class=\"ds-num\" aria-hidden=\"true\">1.1</span><label class=\"ds-label\" for=\"ds-name\">Your name</label><input class=\"ds-input\" id=\"ds-name\" placeholder=\"e.g. Priya Sharma\"><p class=\"ds-help\">Used to sign your reminders.</p></div>",
+      "css": ".ds-section { font-family: var(--font, 'Mukta', system-ui, sans-serif); position: relative; padding-left: 40px; color: var(--ink, #1a1a1a); } .ds-num { position: absolute; left: 0; top: 1px; color: var(--teal, #0f6e7a); font-weight: 800; font-size: 0.95rem; font-variant-numeric: tabular-nums; } .ds-label { display: block; margin-bottom: 8px; font-weight: 600; font-size: 1rem; line-height: 1.3; } .ds-input { font-family: var(--font, 'Mukta', system-ui, sans-serif); display: block; width: 100%; box-sizing: border-box; height: 52px; padding: 0 14px; font-size: 1.0625rem; background: var(--page, #fff); color: var(--ink, #1a1a1a); border: 1.5px solid var(--rule, #9db8bb); border-radius: var(--radius, 6px); caret-color: var(--teal, #0f6e7a); transition: border-color 160ms var(--ease-out, cubic-bezier(0.16, 1, 0.3, 1)), box-shadow 160ms var(--ease-out, cubic-bezier(0.16, 1, 0.3, 1)); } .ds-input::placeholder { color: var(--ink-placeholder, #6b7778); opacity: 1; } .ds-input:hover { border-color: var(--teal, #0f6e7a); } .ds-input:focus-visible { outline: none; border-color: var(--teal, #0f6e7a); box-shadow: 0 0 0 3px var(--teal-100, #e3f2f3); } .ds-help { margin: 8px 0 0; font-size: 0.9375rem; line-height: 1.4; color: var(--ink-muted, #4d5b5e); }"
+    },
+    {
+      "name": "Input with Error",
+      "kind": "input",
+      "refersTo": "input-text",
+      "description": "Invalid state: red-ink outline and a red message with a Lucide icon directly under the input.",
+      "html": "<div class=\"ds-err-wrap\"><input class=\"ds-input-err\" aria-invalid=\"true\" value=\"98765\"><p class=\"ds-field-error\"><svg aria-hidden=\"true\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"12\" cy=\"12\" r=\"10\"/><line x1=\"12\" x2=\"12\" y1=\"8\" y2=\"12\"/><line x1=\"12\" x2=\"12.01\" y1=\"16\" y2=\"16\"/></svg>Enter a 10-digit mobile number.</p></div>",
+      "css": ".ds-err-wrap { font-family: var(--font, 'Mukta', system-ui, sans-serif); } .ds-input-err { font-family: var(--font, 'Mukta', system-ui, sans-serif); display: block; width: 100%; box-sizing: border-box; height: 52px; padding: 0 14px; font-size: 1.0625rem; background: var(--page, #fff); border: 1.5px solid var(--error, #b3261e); border-radius: var(--radius, 6px); caret-color: var(--teal, #0f6e7a); } .ds-input-err:focus-visible { outline: none; box-shadow: 0 0 0 3px var(--error-50, #fdf1f0); } .ds-field-error { display: flex; gap: 6px; align-items: flex-start; margin: 8px 0 0; color: var(--error, #b3261e); font-size: 0.9375rem; font-weight: 600; line-height: 1.35; } .ds-field-error svg { flex: none; margin-top: 2px; }"
+    },
+    {
+      "name": "Chapter Band",
+      "kind": "custom",
+      "refersTo": "chapter-band",
+      "description": "Shared full-bleed teal header on every screen: white Mukta 800 headline, optional teal-wash line; the gutter sits inside the column so band text aligns with the page column. The solid marigold numeral appears on Setup only (\"1\"). Carries view-transition names chapter-band, chapter-text, chapter-numeral.",
+      "html": "<header class=\"ds-band\"><div class=\"ds-band-inner\"><div><h1 class=\"ds-band-title\">Welcome! Let's set up your tuition app.</h1><p class=\"ds-band-sub\">Four quick sections. It takes about a minute.</p></div><span class=\"ds-numeral\" aria-hidden=\"true\">1</span></div></header>",
+      "css": ".ds-band { font-family: var(--font, 'Mukta', system-ui, sans-serif); background: var(--teal, #0f6e7a); color: #fff; padding: 32px 0 28px; } .ds-band-inner { max-width: 34rem; margin-inline: auto; padding-inline: 20px; display: flex; align-items: flex-end; justify-content: space-between; gap: 16px; } .ds-band-title { margin: 0; font-size: clamp(1.75rem, 7.4vw, 2.25rem); line-height: 1.08; font-weight: 800; letter-spacing: -0.012em; text-wrap: balance; } .ds-band-sub { margin: 10px 0 0; color: var(--teal-100, #e3f2f3); font-size: 1rem; } .ds-numeral { flex: none; font-size: clamp(5rem, 24vw, 6rem); line-height: 0.78; font-weight: 800; letter-spacing: -0.04em; color: var(--marigold, #f4b63f); font-variant-numeric: lining-nums; margin-bottom: -2px; }"
+    },
+    {
+      "name": "Note Box",
+      "kind": "card",
+      "refersTo": "note-box",
+      "description": "Marigold-tinted aside with a bold Note lead and no side stripe.",
+      "html": "<p class=\"ds-note\"><strong>Note</strong> You can add this later in Settings. It adds a payment link to reminders.</p>",
+      "css": ".ds-note { font-family: var(--font, 'Mukta', system-ui, sans-serif); margin: 0; padding: 10px 12px; background: var(--marigold-100, #fdf0d2); color: var(--marigold-ink, #5c3d00); border-radius: var(--radius, 6px); font-size: 0.9375rem; line-height: 1.4; } .ds-note strong { font-weight: 800; margin-right: 4px; }"
+    },
+    {
+      "name": "Two-Button Dock (Cancel + Save)",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Outlined secondary Cancel (1fr) beside the primary Save (2fr), hint line underneath; still one primary action.",
+      "html": "<div class=\"ds-dock\"><div class=\"ds-dock-actions\"><button class=\"ds-btn-secondary\">Cancel</button><button class=\"ds-cta\">Save student</button></div><p class=\"ds-cta-hint\">To save, add a batch.</p></div>",
+      "css": ".ds-dock { font-family: var(--font, 'Mukta', system-ui, sans-serif); background: var(--page, #ffffff); border-top: 1px solid var(--rule-soft, #e3e9ea); padding: 12px 20px 14px; } .ds-dock-actions { display: grid; grid-template-columns: 1fr 2fr; gap: 10px; } .ds-btn-secondary { font-family: var(--font, 'Mukta', system-ui, sans-serif); height: 56px; border: 1.5px solid var(--teal, #0f6e7a); border-radius: var(--radius, 6px); background: var(--page, #ffffff); color: var(--teal, #0f6e7a); font-size: 1.125rem; font-weight: 600; cursor: pointer; transition: background-color 160ms var(--ease-out, cubic-bezier(0.16, 1, 0.3, 1)), transform 120ms var(--ease-out, cubic-bezier(0.16, 1, 0.3, 1)); } .ds-btn-secondary:hover { background: var(--teal-50, #f1f8f8); } .ds-btn-secondary:active { background: var(--teal-100, #e3f2f3); transform: scale(0.985); } .ds-btn-secondary:focus-visible { outline: 2px solid var(--teal, #0f6e7a); outline-offset: 2px; } .ds-cta { font-family: var(--font, 'Mukta', system-ui, sans-serif); display: block; width: 100%; height: 56px; border: 0; border-radius: var(--radius, 6px); background: var(--teal, #0f6e7a); color: #fff; font-size: 1.125rem; font-weight: 600; cursor: pointer; transition: background-color 160ms var(--ease-out, cubic-bezier(0.16, 1, 0.3, 1)), transform 120ms var(--ease-out, cubic-bezier(0.16, 1, 0.3, 1)); } .ds-cta:hover { background: var(--teal-900, #0b4f58); } .ds-cta:active { transform: scale(0.985); } .ds-cta:focus-visible { outline: 2px solid var(--teal, #0f6e7a); outline-offset: 2px; } .ds-cta-hint { margin: 8px 0 0; text-align: center; font-size: 0.9375rem; color: var(--ink-muted, #4d5b5e); }"
+    },
+    {
+      "name": "Inline Delete Confirm",
+      "kind": "custom",
+      "refersTo": "delete-confirm",
+      "description": "Danger text button below the form; tapping it opens an error-wash confirm box in place with Keep (secondary) and Delete (solid red). Delete only. One shared style for the student form and Manage batches.",
+      "html": "<div class=\"ds-delete-zone\"><button class=\"ds-danger-text\"><svg aria-hidden=\"true\" width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M3 6h18\"/><path d=\"M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6\"/><path d=\"M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2\"/><line x1=\"10\" x2=\"10\" y1=\"11\" y2=\"17\"/><line x1=\"14\" x2=\"14\" y1=\"11\" y2=\"17\"/></svg>Delete student</button><div class=\"ds-confirm\" role=\"group\"><p class=\"ds-confirm-text\">Delete Aarav Mehta? This can't be undone.</p><div class=\"ds-confirm-actions\"><button class=\"ds-btn-secondary\">Keep</button><button class=\"ds-btn-danger\">Delete</button></div></div></div>",
+      "css": ".ds-delete-zone { font-family: var(--font, 'Mukta', system-ui, sans-serif); color: var(--ink, #1a1a1a); padding: 20px 0 0 40px; border-top: 1px solid var(--rule-soft, #e3e9ea); } .ds-danger-text { font-family: var(--font, 'Mukta', system-ui, sans-serif); display: inline-flex; align-items: center; gap: 8px; min-height: 48px; padding: 0 12px 0 8px; margin: 0 0 12px -8px; border: 0; border-radius: var(--radius, 6px); background: transparent; color: var(--error, #b3261e); font-size: 1rem; font-weight: 600; cursor: pointer; transition: background-color 160ms var(--ease-out, cubic-bezier(0.16, 1, 0.3, 1)); } .ds-danger-text:hover, .ds-danger-text:active { background: var(--error-50, #fdf1f0); } .ds-danger-text:focus-visible { outline: 2px solid var(--teal, #0f6e7a); outline-offset: 2px; } .ds-confirm { padding: 14px; background: var(--error-50, #fdf1f0); border-radius: var(--radius, 6px); } .ds-confirm-text { margin: 0; font-weight: 600; line-height: 1.4; } .ds-confirm-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 12px; } .ds-btn-secondary { font-family: var(--font, 'Mukta', system-ui, sans-serif); height: 56px; border: 1.5px solid var(--teal, #0f6e7a); border-radius: var(--radius, 6px); background: var(--page, #ffffff); color: var(--teal, #0f6e7a); font-size: 1.125rem; font-weight: 600; cursor: pointer; transition: background-color 160ms var(--ease-out, cubic-bezier(0.16, 1, 0.3, 1)), transform 120ms var(--ease-out, cubic-bezier(0.16, 1, 0.3, 1)); } .ds-btn-secondary:hover { background: var(--teal-50, #f1f8f8); } .ds-btn-secondary:active { background: var(--teal-100, #e3f2f3); transform: scale(0.985); } .ds-btn-secondary:focus-visible { outline: 2px solid var(--teal, #0f6e7a); outline-offset: 2px; } .ds-confirm-actions .ds-btn-secondary { height: 48px; font-size: 1rem; } .ds-btn-danger { font-family: var(--font, 'Mukta', system-ui, sans-serif); height: 48px; padding: 0 18px; border: 0; border-radius: var(--radius, 6px); background: var(--error, #b3261e); color: #fff; font-size: 1rem; font-weight: 600; cursor: pointer; transition: transform 120ms var(--ease-out, cubic-bezier(0.16, 1, 0.3, 1)); } .ds-btn-danger:active { transform: scale(0.985); } .ds-btn-danger:focus-visible { outline: 2px solid var(--error, #b3261e); outline-offset: 2px; }"
+    },
+    {
+      "name": "Inline Name Editor",
+      "kind": "input",
+      "refersTo": "inline-editor",
+      "description": "Teal-mist panel (14px padding, 6px radius): label, 52px input, error, then Cancel (secondary) / save (primary) two-up at 48px. Enter saves, Escape cancels, never submits the enclosing form. Unrolls open (row-unroll 280ms + clip while moving); instant under reduced motion.",
+      "html": "<div class=\"ds-editor-wrap\"><div class=\"ds-editor\"><label class=\"ds-label\" for=\"ds-batch-name\">New batch name</label><input class=\"ds-input\" id=\"ds-batch-name\" placeholder=\"e.g. Weekend \u2013 Class 6\" autocomplete=\"off\"><div class=\"ds-editor-actions\"><button type=\"button\" class=\"ds-btn-secondary-sm\">Cancel</button><button type=\"button\" class=\"ds-btn-primary-sm\">Add batch</button></div></div></div>",
+      "css": ".ds-editor-wrap { font-family: var(--font, 'Mukta', system-ui, sans-serif); display: grid; animation: ds-row-unroll 280ms var(--ease-out, cubic-bezier(0.16, 1, 0.3, 1)); color: var(--ink, #1a1a1a); } .ds-editor { min-height: 0; padding: 14px; background: var(--teal-50, #f1f8f8); border-radius: var(--radius, 6px); animation: ds-clip-while-moving 280ms; } .ds-label { display: block; margin-bottom: 8px; font-weight: 600; font-size: 1rem; line-height: 1.3; } .ds-input { font-family: var(--font, 'Mukta', system-ui, sans-serif); display: block; width: 100%; box-sizing: border-box; height: 52px; padding: 0 14px; font-size: 1.0625rem; background: var(--page, #ffffff); color: var(--ink, #1a1a1a); border: 1.5px solid var(--rule, #9db8bb); border-radius: var(--radius, 6px); caret-color: var(--teal, #0f6e7a); transition: border-color 160ms var(--ease-out, cubic-bezier(0.16, 1, 0.3, 1)), box-shadow 160ms var(--ease-out, cubic-bezier(0.16, 1, 0.3, 1)); } .ds-input::placeholder { color: var(--ink-placeholder, #6b7778); opacity: 1; } .ds-input:hover { border-color: var(--teal, #0f6e7a); } .ds-input:focus-visible { outline: none; border-color: var(--teal, #0f6e7a); box-shadow: 0 0 0 3px var(--teal-100, #e3f2f3); } .ds-editor-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 12px; } .ds-btn-secondary-sm { font-family: var(--font, 'Mukta', system-ui, sans-serif); height: 48px; border: 1.5px solid var(--teal, #0f6e7a); border-radius: var(--radius, 6px); background: var(--page, #ffffff); color: var(--teal, #0f6e7a); font-size: 1rem; font-weight: 600; cursor: pointer; transition: background-color 160ms var(--ease-out, cubic-bezier(0.16, 1, 0.3, 1)), transform 120ms var(--ease-out, cubic-bezier(0.16, 1, 0.3, 1)); } .ds-btn-secondary-sm:hover { background: var(--teal-50, #f1f8f8); } .ds-btn-secondary-sm:active { background: var(--teal-100, #e3f2f3); transform: scale(0.985); } .ds-btn-secondary-sm:focus-visible { outline: 2px solid var(--teal, #0f6e7a); outline-offset: 2px; } .ds-btn-primary-sm { font-family: var(--font, 'Mukta', system-ui, sans-serif); height: 48px; border: 0; border-radius: var(--radius, 6px); background: var(--teal, #0f6e7a); color: #fff; font-size: 1rem; font-weight: 600; cursor: pointer; transition: background-color 160ms var(--ease-out, cubic-bezier(0.16, 1, 0.3, 1)), transform 120ms var(--ease-out, cubic-bezier(0.16, 1, 0.3, 1)); } .ds-btn-primary-sm:hover { background: var(--teal-900, #0b4f58); } .ds-btn-primary-sm:active { transform: scale(0.985); } .ds-btn-primary-sm:focus-visible { outline: 2px solid var(--teal, #0f6e7a); outline-offset: 2px; } @keyframes ds-row-unroll { from { grid-template-rows: 0fr; opacity: 0; } to { grid-template-rows: 1fr; opacity: 1; } } @keyframes ds-clip-while-moving { from, to { overflow: hidden; } } @media (prefers-reduced-motion: reduce) { .ds-editor-wrap, .ds-editor { animation: none; } }"
+    },
+    {
+      "name": "Select Field",
+      "kind": "input",
+      "refersTo": "input-select",
+      "description": "Native select dressed as the text input, with a drawn muted chevron; the prompt reads in placeholder ink until something is chosen.",
+      "html": "<div class=\"ds-select-wrap\"><select class=\"ds-input\" required><option value=\"\" disabled selected>Choose a batch</option><option>Class 9 Maths</option><option>Class 10 Science</option></select><svg aria-hidden=\"true\" width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m6 9 6 6 6-6\"/></svg></div>",
+      "css": ".ds-input { font-family: var(--font, 'Mukta', system-ui, sans-serif); display: block; width: 100%; box-sizing: border-box; height: 52px; padding: 0 14px; font-size: 1.0625rem; background: var(--page, #ffffff); color: var(--ink, #1a1a1a); border: 1.5px solid var(--rule, #9db8bb); border-radius: var(--radius, 6px); caret-color: var(--teal, #0f6e7a); transition: border-color 160ms var(--ease-out, cubic-bezier(0.16, 1, 0.3, 1)), box-shadow 160ms var(--ease-out, cubic-bezier(0.16, 1, 0.3, 1)); } .ds-input::placeholder { color: var(--ink-placeholder, #6b7778); opacity: 1; } .ds-input:hover { border-color: var(--teal, #0f6e7a); } .ds-input:focus-visible { outline: none; border-color: var(--teal, #0f6e7a); box-shadow: 0 0 0 3px var(--teal-100, #e3f2f3); } .ds-select-wrap { position: relative; } .ds-select-wrap .ds-input { appearance: none; padding-right: 44px; cursor: pointer; } .ds-select-wrap .ds-input:invalid { color: var(--ink-placeholder, #6b7778); } .ds-select-wrap svg { position: absolute; right: 14px; top: 50%; transform: translateY(-50%); color: var(--ink-muted, #4d5b5e); pointer-events: none; }"
+    },
+    {
+      "name": "Input with Rupee Affix",
+      "kind": "input",
+      "refersTo": "input-affix",
+      "description": "Text input with a leading muted 600 \u20b9 unit inside; value starts at 32px in tabular numerals.",
+      "html": "<div class=\"ds-affix-wrap\"><span class=\"ds-affix\" aria-hidden=\"true\">\u20b9</span><input class=\"ds-input\" inputmode=\"numeric\" placeholder=\"e.g. 1500\"></div>",
+      "css": ".ds-input { font-family: var(--font, 'Mukta', system-ui, sans-serif); display: block; width: 100%; box-sizing: border-box; height: 52px; padding: 0 14px; font-size: 1.0625rem; background: var(--page, #ffffff); color: var(--ink, #1a1a1a); border: 1.5px solid var(--rule, #9db8bb); border-radius: var(--radius, 6px); caret-color: var(--teal, #0f6e7a); transition: border-color 160ms var(--ease-out, cubic-bezier(0.16, 1, 0.3, 1)), box-shadow 160ms var(--ease-out, cubic-bezier(0.16, 1, 0.3, 1)); } .ds-input::placeholder { color: var(--ink-placeholder, #6b7778); opacity: 1; } .ds-input:hover { border-color: var(--teal, #0f6e7a); } .ds-input:focus-visible { outline: none; border-color: var(--teal, #0f6e7a); box-shadow: 0 0 0 3px var(--teal-100, #e3f2f3); } .ds-affix-wrap { position: relative; } .ds-affix { font-family: var(--font, 'Mukta', system-ui, sans-serif); position: absolute; left: 14px; top: 50%; transform: translateY(-50%); color: var(--ink-muted, #4d5b5e); font-size: 1.0625rem; font-weight: 600; pointer-events: none; } .ds-affix-wrap .ds-input { padding-left: 32px; font-variant-numeric: tabular-nums; }"
+    },
+    {
+      "name": "Floating Add Block",
+      "kind": "button",
+      "refersTo": "button-fab",
+      "description": "Home's one primary: a 72px teal block knocked out of the page by a 4px page-white border (10px outer radius, about 6px on the teal), no shadow. From 46rem it moves into the right margin.",
+      "html": "<button class=\"ds-fab\" aria-label=\"Add student\"><svg aria-hidden=\"true\" width=\"28\" height=\"28\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M5 12h14\"/><path d=\"M12 5v14\"/></svg></button>",
+      "css": ".ds-fab { width: 72px; height: 72px; display: grid; place-items: center; border: 4px solid var(--page, #ffffff); border-radius: 10px; background: var(--teal, #0f6e7a); color: #fff; cursor: pointer; transition: background-color 160ms var(--ease-out, cubic-bezier(0.16, 1, 0.3, 1)), transform 120ms var(--ease-out, cubic-bezier(0.16, 1, 0.3, 1)); } .ds-fab:hover { background: var(--teal-900, #0b4f58); } .ds-fab:active { transform: scale(0.96); } .ds-fab:focus-visible { outline: 2px solid var(--teal, #0f6e7a); outline-offset: 2px; }"
+    },
+    {
+      "name": "Batch Group",
+      "kind": "custom",
+      "refersTo": "batch-toggle",
+      "description": "Unnumbered batch group on the 20px page edge (no hang; aligned with the summary strip and tabs): full-width toggle (Title name with balanced wrap, muted count, teal chevron rotating 180\u00b0). Its rows are the 'Student Rows with Status and Actions' component.",
+      "html": "<section class=\"ds-batch is-open\"><h2 class=\"ds-batch-heading\"><button class=\"ds-batch-toggle\" aria-expanded=\"true\"><span class=\"ds-batch-name\">Class 9 Maths</span><span class=\"ds-batch-count\">2 students</span><svg class=\"ds-batch-chevron\" aria-hidden=\"true\" width=\"22\" height=\"22\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m6 9 6 6 6-6\"/></svg></button></h2></section>",
+      "css": ".ds-batch { font-family: var(--font, 'Mukta', system-ui, sans-serif); position: relative; color: var(--ink, #1a1a1a); } .ds-batch-heading { margin: 0; font-size: 1.25rem; font-weight: 800; line-height: 1.25; } .ds-batch-toggle { display: flex; align-items: center; gap: 10px; width: calc(100% + 16px); min-height: 60px; margin: 0 -8px; padding: 10px 8px; border: 0; border-radius: var(--radius, 6px); background: transparent; font: inherit; color: inherit; text-align: left; cursor: pointer; transition: background-color 160ms var(--ease-out, cubic-bezier(0.16, 1, 0.3, 1)); } .ds-batch-toggle:hover { background: var(--teal-50, #f1f8f8); } .ds-batch-toggle:active { background: var(--teal-100, #e3f2f3); } .ds-batch-toggle:focus-visible { outline: 2px solid var(--teal, #0f6e7a); outline-offset: -2px; } .ds-batch-name { flex: 1; min-width: 0; text-wrap: balance; overflow-wrap: anywhere; } .ds-batch-count { flex: none; font-size: 0.9375rem; font-weight: 600; color: var(--ink-muted, #4d5b5e); font-variant-numeric: tabular-nums; } .ds-batch-chevron { flex: none; color: var(--teal, #0f6e7a); transition: transform 220ms var(--ease-out, cubic-bezier(0.16, 1, 0.3, 1)); } .ds-batch.is-open .ds-batch-chevron { transform: rotate(180deg); }"
+    },
+    {
+      "name": "Manage Batches List",
+      "kind": "custom",
+      "refersTo": "manage-batch-open",
+      "description": "'Your batches N' (Title 800, teal tabular count) over a hairline list on the 20px page edge. Each row: a rename button (name 600 balanced, muted 'N students', Pencil cue turning teal on hover) and a 48px trash icon button (red ink on error-wash on hover or when expanded). The inline confirm for a batch with students adds a 'Move students to' select and Cancel / 'Move and delete' at 1fr 1.6fr. Rows unroll when added and roll shut before a delete commits.",
+      "html": "<div class=\"ds-manage\"><h2 class=\"ds-mhead\">Your batches <span class=\"ds-mhead-count\">2</span></h2><ul class=\"ds-mlist\"><li class=\"ds-mitem\"><div class=\"ds-mrow\"><button type=\"button\" class=\"ds-mopen\"><span class=\"ds-mname\">Class 9 Maths</span><span class=\"ds-mcount\">4 students</span><svg class=\"ds-mcue\" aria-hidden=\"true\" width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z\"/><path d=\"m15 5 4 4\"/></svg></button><button type=\"button\" class=\"ds-mdelete\" aria-label=\"Delete batch Class 9 Maths\" aria-expanded=\"true\"><svg aria-hidden=\"true\" width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M3 6h18\"/><path d=\"M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6\"/><path d=\"M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2\"/><line x1=\"10\" x2=\"10\" y1=\"11\" y2=\"17\"/><line x1=\"14\" x2=\"14\" y1=\"11\" y2=\"17\"/></svg></button></div><div class=\"ds-mconfirm\" role=\"group\"><p class=\"ds-mconfirm-text\">Class 9 Maths has 4 students. Choose a batch to move them to, then delete.</p><div class=\"ds-mmove\"><label class=\"ds-label\" for=\"ds-move\">Move students to</label><div class=\"ds-select-wrap\"><select class=\"ds-input\" id=\"ds-move\" required><option value=\"\" disabled selected>Choose a batch</option><option>Weekend \u2013 Class 6</option></select><svg aria-hidden=\"true\" width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m6 9 6 6 6-6\"/></svg></div></div><div class=\"ds-mactions\"><button type=\"button\" class=\"ds-btn-secondary-sm\">Cancel</button><button type=\"button\" class=\"ds-btn-danger\">Move and delete</button></div></div></li><li class=\"ds-mitem\"><div class=\"ds-mrow\"><button type=\"button\" class=\"ds-mopen\"><span class=\"ds-mname\">Weekend \u2013 Class 6</span><span class=\"ds-mcount\">0 students</span><svg class=\"ds-mcue\" aria-hidden=\"true\" width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z\"/><path d=\"m15 5 4 4\"/></svg></button><button type=\"button\" class=\"ds-mdelete\" aria-label=\"Delete batch Weekend \u2013 Class 6\" aria-expanded=\"false\"><svg aria-hidden=\"true\" width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M3 6h18\"/><path d=\"M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6\"/><path d=\"M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2\"/><line x1=\"10\" x2=\"10\" y1=\"11\" y2=\"17\"/><line x1=\"14\" x2=\"14\" y1=\"11\" y2=\"17\"/></svg></button></div></li></ul></div>",
+      "css": ".ds-manage { font-family: var(--font, 'Mukta', system-ui, sans-serif); color: var(--ink, #1a1a1a); } .ds-mhead { display: flex; align-items: baseline; gap: 8px; margin: 0 0 8px; font-size: 1.25rem; font-weight: 800; } .ds-mhead-count { color: var(--teal, #0f6e7a); font-variant-numeric: tabular-nums; } .ds-mlist { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--rule-soft, #e3e9ea); } .ds-mitem { border-bottom: 1px solid var(--rule-soft, #e3e9ea); padding: 8px 0; } .ds-mrow { display: flex; align-items: center; gap: 4px; } .ds-mopen { font-family: var(--font, 'Mukta', system-ui, sans-serif); flex: 1; min-width: 0; display: flex; align-items: center; gap: 10px; min-height: 56px; margin-left: -8px; padding: 6px 8px; border: 0; border-radius: var(--radius, 6px); background: transparent; color: inherit; text-align: left; cursor: pointer; transition: background-color 160ms var(--ease-out, cubic-bezier(0.16, 1, 0.3, 1)); } .ds-mopen:hover { background: var(--teal-50, #f1f8f8); } .ds-mopen:active { background: var(--teal-100, #e3f2f3); } .ds-mopen:focus-visible { outline: 2px solid var(--teal, #0f6e7a); outline-offset: -2px; } .ds-mname { flex: 1; min-width: 0; text-wrap: balance; overflow-wrap: anywhere; font-size: 1.0625rem; font-weight: 600; } .ds-mcount { flex: none; font-size: 0.9375rem; color: var(--ink-muted, #4d5b5e); font-variant-numeric: tabular-nums; } .ds-mcue { flex: none; color: var(--ink-muted, #4d5b5e); } .ds-mopen:hover .ds-mcue { color: var(--teal, #0f6e7a); } .ds-mdelete { flex: none; width: 48px; height: 48px; display: grid; place-items: center; padding: 0; border: 0; border-radius: var(--radius, 6px); background: transparent; color: var(--ink-muted, #4d5b5e); cursor: pointer; transition: background-color 160ms var(--ease-out, cubic-bezier(0.16, 1, 0.3, 1)), color 160ms var(--ease-out, cubic-bezier(0.16, 1, 0.3, 1)); } .ds-mdelete:hover, .ds-mdelete[aria-expanded='true'] { background: var(--error-50, #fdf1f0); color: var(--error, #b3261e); } .ds-mdelete:focus-visible { outline: 2px solid var(--teal, #0f6e7a); outline-offset: 2px; } .ds-mconfirm { margin: 4px 0 6px; padding: 14px; background: var(--error-50, #fdf1f0); border-radius: var(--radius, 6px); animation: ds-confirm-open 200ms var(--ease-out, cubic-bezier(0.16, 1, 0.3, 1)); } .ds-mconfirm-text { margin: 0; font-weight: 600; line-height: 1.4; } .ds-mmove { margin-top: 12px; } .ds-label { display: block; margin-bottom: 8px; font-weight: 600; font-size: 1rem; line-height: 1.3; } .ds-input { font-family: var(--font, 'Mukta', system-ui, sans-serif); display: block; width: 100%; box-sizing: border-box; height: 52px; padding: 0 14px; font-size: 1.0625rem; background: var(--page, #ffffff); color: var(--ink, #1a1a1a); border: 1.5px solid var(--rule, #9db8bb); border-radius: var(--radius, 6px); caret-color: var(--teal, #0f6e7a); transition: border-color 160ms var(--ease-out, cubic-bezier(0.16, 1, 0.3, 1)), box-shadow 160ms var(--ease-out, cubic-bezier(0.16, 1, 0.3, 1)); } .ds-input::placeholder { color: var(--ink-placeholder, #6b7778); opacity: 1; } .ds-input:hover { border-color: var(--teal, #0f6e7a); } .ds-input:focus-visible { outline: none; border-color: var(--teal, #0f6e7a); box-shadow: 0 0 0 3px var(--teal-100, #e3f2f3); } .ds-select-wrap { position: relative; } .ds-select-wrap .ds-input { appearance: none; padding-right: 44px; cursor: pointer; } .ds-select-wrap .ds-input:invalid { color: var(--ink-placeholder, #6b7778); } .ds-select-wrap svg { position: absolute; right: 14px; top: 50%; transform: translateY(-50%); color: var(--ink-muted, #4d5b5e); pointer-events: none; } .ds-mactions { display: grid; grid-template-columns: 1fr 1.6fr; gap: 10px; margin-top: 12px; } .ds-btn-secondary-sm { font-family: var(--font, 'Mukta', system-ui, sans-serif); height: 48px; border: 1.5px solid var(--teal, #0f6e7a); border-radius: var(--radius, 6px); background: var(--page, #ffffff); color: var(--teal, #0f6e7a); font-size: 1rem; font-weight: 600; cursor: pointer; transition: background-color 160ms var(--ease-out, cubic-bezier(0.16, 1, 0.3, 1)), transform 120ms var(--ease-out, cubic-bezier(0.16, 1, 0.3, 1)); } .ds-btn-secondary-sm:hover { background: var(--teal-50, #f1f8f8); } .ds-btn-secondary-sm:active { background: var(--teal-100, #e3f2f3); transform: scale(0.985); } .ds-btn-secondary-sm:focus-visible { outline: 2px solid var(--teal, #0f6e7a); outline-offset: 2px; } .ds-btn-danger { font-family: var(--font, 'Mukta', system-ui, sans-serif); height: 48px; padding: 0 18px; border: 0; border-radius: var(--radius, 6px); background: var(--error, #b3261e); color: #fff; font-size: 1rem; font-weight: 600; cursor: pointer; transition: transform 120ms var(--ease-out, cubic-bezier(0.16, 1, 0.3, 1)); } .ds-btn-danger:active { transform: scale(0.985); } .ds-btn-danger:focus-visible { outline: 2px solid var(--error, #b3261e); outline-offset: 2px; } @keyframes ds-confirm-open { from { opacity: 0; transform: translateY(-4px); } } @media (prefers-reduced-motion: reduce) { .ds-mconfirm { animation-name: ds-fade-in; } @keyframes ds-fade-in { from { opacity: 0; } } }"
+    },
+    {
+      "name": "Student Rows with Status and Actions",
+      "kind": "custom",
+      "refersTo": "student-open",
+      "description": "Ruled rows on the 20px page edge (no hang): edit button (name 600 + inline muted ChevronRight cue, meta 'Class 8 \u00b7 \u20b91,500'), word-plus-icon status badge, 48px row actions. Phones: Pending rows put Remind (outlined teal link) and Mark paid (solid teal) two-up; Paid rows tuck a quiet teal Mark pending under the badge. One line from 46rem.",
+      "html": "<ul class=\"ds-students\"><li><div class=\"ds-row\"><button class=\"ds-open\"><span class=\"ds-name\">Aarav Mehta<svg class=\"ds-cue\" aria-hidden=\"true\" width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m9 18 6-6-6-6\"/></svg></span><span class=\"ds-meta\">Class 8 \u00b7 <span class=\"ds-fee\">\u20b91,500</span></span></button><span class=\"ds-badge is-pending\"><svg aria-hidden=\"true\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"12\" cy=\"12\" r=\"10\"/><path d=\"M12 6v6l4 2\"/></svg>Pending</span><div class=\"ds-actions\"><a class=\"ds-act ds-act-secondary\" href=\"#\"><svg aria-hidden=\"true\" width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M7.9 20A9 9 0 1 0 4 16.1L2 22Z\"/></svg>Remind</a><button class=\"ds-act ds-act-primary\">Mark paid</button></div></div></li><li><div class=\"ds-row is-paid\"><button class=\"ds-open\"><span class=\"ds-name\">Diya Nair<svg class=\"ds-cue\" aria-hidden=\"true\" width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m9 18 6-6-6-6\"/></svg></span><span class=\"ds-meta\">Class 9 \u00b7 <span class=\"ds-fee\">\u20b91,25,000</span></span></button><span class=\"ds-badge is-paid\"><svg aria-hidden=\"true\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M20 6 9 17l-5-5\"/></svg>Paid</span><div class=\"ds-actions\"><button class=\"ds-act ds-act-quiet\">Mark pending</button></div></div></li></ul>",
+      "css": ".ds-students { font-family: var(--font, 'Mukta', system-ui, sans-serif); list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--rule-soft, #e3e9ea); color: var(--ink, #1a1a1a); } .ds-students li { border-bottom: 1px solid var(--rule-soft, #e3e9ea); } .ds-row { display: grid; grid-template-columns: 1fr auto; grid-template-areas: 'open badge' 'actions actions'; gap: 8px 12px; padding: 10px 0 12px; } .ds-row.is-paid { grid-template-areas: 'open badge' 'open actions'; row-gap: 0; } .ds-open { font-family: var(--font, 'Mukta', system-ui, sans-serif); grid-area: open; display: flex; flex-direction: column; min-width: 0; min-height: 48px; margin: -4px -8px; padding: 4px 8px; border: 0; border-radius: var(--radius, 6px); background: transparent; color: inherit; font-size: 1rem; text-align: left; cursor: pointer; transition: background-color 160ms var(--ease-out, cubic-bezier(0.16, 1, 0.3, 1)); } .ds-open:hover { background: var(--teal-50, #f1f8f8); } .ds-open:active { background: var(--teal-100, #e3f2f3); } .ds-open:focus-visible { outline: 2px solid var(--teal, #0f6e7a); outline-offset: -2px; } .ds-name { font-size: 1.0625rem; font-weight: 600; line-height: 1.3; } .ds-cue { display: inline-block; margin-left: 2px; vertical-align: -3px; color: var(--ink-muted, #4d5b5e); transition: translate 160ms var(--ease-out, cubic-bezier(0.16, 1, 0.3, 1)); } .ds-open:hover .ds-cue { color: var(--teal, #0f6e7a); translate: 2px 0; } .ds-meta { font-size: 0.9375rem; color: var(--ink-muted, #4d5b5e); } .ds-fee { font-weight: 600; color: var(--ink, #1a1a1a); font-variant-numeric: tabular-nums; } .ds-badge { grid-area: badge; align-self: start; justify-self: end; display: inline-flex; align-items: center; gap: 4px; margin-top: 2px; padding: 3px 8px; border-radius: var(--radius, 6px); font-size: 0.875rem; font-weight: 600; line-height: 1.3; } .ds-badge.is-pending { background: var(--marigold-100, #fdf0d2); color: var(--marigold-ink, #5c3d00); } .ds-badge.is-paid { background: var(--teal-100, #e3f2f3); color: var(--teal-900, #0b4f58); } .ds-actions { grid-area: actions; display: grid; grid-template-columns: 1fr 1fr; gap: 8px; } .ds-row.is-paid .ds-actions { display: flex; justify-content: flex-end; } .ds-act { font-family: var(--font, 'Mukta', system-ui, sans-serif); display: inline-flex; align-items: center; justify-content: center; gap: 6px; min-height: 48px; padding: 0 14px; border: 0; border-radius: var(--radius, 6px); font-size: 1rem; font-weight: 600; text-decoration: none; cursor: pointer; transition: background-color 160ms var(--ease-out, cubic-bezier(0.16, 1, 0.3, 1)), transform 120ms var(--ease-out, cubic-bezier(0.16, 1, 0.3, 1)); } .ds-act:active { transform: scale(0.985); } .ds-act:focus-visible { outline: 2px solid var(--teal, #0f6e7a); outline-offset: 2px; } .ds-act-primary { background: var(--teal, #0f6e7a); color: #fff; } .ds-act-primary:hover { background: var(--teal-900, #0b4f58); } .ds-act-secondary { background: var(--page, #ffffff); color: var(--teal, #0f6e7a); border: 1.5px solid var(--teal, #0f6e7a); } .ds-act-secondary:hover { background: var(--teal-50, #f1f8f8); } .ds-act-quiet { margin-right: -8px; padding: 0 8px; background: transparent; color: var(--teal, #0f6e7a); } .ds-act-quiet:hover { background: var(--teal-50, #f1f8f8); } .ds-act-quiet:active { background: var(--teal-100, #e3f2f3); } @media (min-width: 46rem) { .ds-row, .ds-row.is-paid { grid-template-columns: 1fr auto auto; grid-template-areas: 'open badge actions'; align-items: center; } .ds-badge { align-self: center; margin-top: 0; } .ds-actions { grid-template-columns: auto auto; } }"
+    },
+    {
+      "name": "Month Switcher (in the band)",
+      "kind": "nav",
+      "refersTo": "month-step",
+      "description": "White 48px chevron steps either side of a white Mukta 800 1.25rem month label (min 8.5em, aria-live); white-alpha hover, 0.35 opacity at the range ends.",
+      "html": "<div class=\"ds-band-demo\"><div class=\"ds-month\"><button class=\"ds-month-step\" aria-label=\"Previous month, September 2026\"><svg aria-hidden=\"true\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m15 18-6-6 6-6\"/></svg></button><p class=\"ds-month-label\" aria-live=\"polite\">October 2026</p><button class=\"ds-month-step\" disabled aria-label=\"Next month, November 2026\"><svg aria-hidden=\"true\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m9 18 6-6-6-6\"/></svg></button></div></div>",
+      "css": ".ds-band-demo { font-family: var(--font, 'Mukta', system-ui, sans-serif); background: var(--teal, #0f6e7a); padding: 12px 20px; } .ds-month { display: flex; align-items: center; margin-left: -12px; } .ds-month-step { width: 48px; height: 48px; display: grid; place-items: center; border: 0; border-radius: var(--radius, 6px); background: transparent; color: #fff; cursor: pointer; transition: background-color 160ms var(--ease-out, cubic-bezier(0.16, 1, 0.3, 1)); } .ds-month-step:hover:not(:disabled) { background: rgb(255 255 255 / 0.12); } .ds-month-step:disabled { opacity: 0.35; cursor: default; } .ds-month-step:focus-visible { outline: 2px solid #fff; outline-offset: 2px; } .ds-month-label { margin: 0; min-width: 8.5em; text-align: center; font-size: 1.25rem; font-weight: 800; color: #fff; }"
+    },
+    {
+      "name": "Summary Strip",
+      "kind": "custom",
+      "refersTo": "summary-cell",
+      "description": "The month's fees as a printed three-cell table: teal-grey rule top and bottom, soft-rule dividers, muted captions, 1.25rem 800 tabular figures; Pending in marigold ink; Students with a muted 'pending' unit.",
+      "html": "<dl class=\"ds-summary\"><div class=\"ds-cell\"><dt>Collected</dt><dd>\u20b912,000</dd></div><div class=\"ds-cell\"><dt>Pending</dt><dd>\u20b94,500</dd></div><div class=\"ds-cell\"><dt>Students</dt><dd>3 <span class=\"ds-unit\">pending</span></dd></div></dl>",
+      "css": ".ds-summary { font-family: var(--font, 'Mukta', system-ui, sans-serif); display: grid; grid-template-columns: repeat(3, 1fr); margin: 0; border-block: 1px solid var(--rule, #9db8bb); color: var(--ink, #1a1a1a); } .ds-cell { min-width: 0; padding: 10px 10px 12px; } .ds-cell:first-child { padding-left: 0; } .ds-cell + .ds-cell { border-left: 1px solid var(--rule-soft, #e3e9ea); } .ds-cell dt { font-size: 0.875rem; font-weight: 600; line-height: 1.3; color: var(--ink-muted, #4d5b5e); } .ds-cell dd { margin: 2px 0 0; font-size: 1.25rem; font-weight: 800; line-height: 1.2; font-variant-numeric: tabular-nums; } .ds-cell:nth-child(2) dd { color: var(--marigold-ink, #5c3d00); } .ds-unit { font-size: 0.9375rem; font-weight: 600; color: var(--ink-muted, #4d5b5e); }"
+    },
+    {
+      "name": "Filter Tabs",
+      "kind": "nav",
+      "refersTo": "filter-tab",
+      "description": "WAI-ARIA tabs on three equal 48px columns; selected is deep teal 800 with a 3px teal underline bar; count chips soft-rule, teal-wash when selected. Arrow, Home and End keys.",
+      "html": "<div class=\"ds-tabs\" role=\"tablist\" aria-label=\"Show students\"><button class=\"ds-tab\" role=\"tab\" aria-selected=\"true\">Pending<span class=\"ds-count\">3</span></button><button class=\"ds-tab\" role=\"tab\" aria-selected=\"false\" tabindex=\"-1\">Paid<span class=\"ds-count\">8</span></button><button class=\"ds-tab\" role=\"tab\" aria-selected=\"false\" tabindex=\"-1\">All<span class=\"ds-count\">11</span></button></div>",
+      "css": ".ds-tabs { font-family: var(--font, 'Mukta', system-ui, sans-serif); display: grid; grid-template-columns: repeat(3, 1fr); border-bottom: 1px solid var(--rule-soft, #e3e9ea); } .ds-tab { font-family: var(--font, 'Mukta', system-ui, sans-serif); position: relative; display: flex; align-items: center; justify-content: center; gap: 6px; min-height: 48px; border: 0; border-radius: var(--radius, 6px) var(--radius, 6px) 0 0; background: transparent; color: var(--ink-muted, #4d5b5e); font-size: 1rem; font-weight: 600; cursor: pointer; transition: background-color 160ms var(--ease-out, cubic-bezier(0.16, 1, 0.3, 1)); } .ds-tab:hover { background: var(--teal-50, #f1f8f8); } .ds-tab:focus-visible { outline: 2px solid var(--teal, #0f6e7a); outline-offset: -2px; } .ds-tab[aria-selected='true'] { color: var(--teal-900, #0b4f58); font-weight: 800; } .ds-tab[aria-selected='true']::after { content: ''; position: absolute; left: 8px; right: 8px; bottom: -1px; height: 3px; background: var(--teal, #0f6e7a); } .ds-count { min-width: 24px; padding: 0 6px; border-radius: var(--radius, 6px); background: var(--rule-soft, #e3e9ea); color: var(--ink, #1a1a1a); font-size: 0.875rem; font-weight: 600; font-variant-numeric: tabular-nums; } .ds-tab[aria-selected='true'] .ds-count { background: var(--teal-100, #e3f2f3); color: var(--teal-900, #0b4f58); }"
+    },
+    {
+      "name": "Toast with Undo",
+      "kind": "custom",
+      "refersTo": "toast",
+      "description": "Flat ink block, white text, 6px radius, no shadow, min 56px; Undo in teal-wash 800. 6s, pauses on hover or focus; rises 8px over 220ms (fade only under reduced motion).",
+      "html": "<div class=\"ds-toast\" role=\"status\"><p class=\"ds-toast-msg\">Aarav Mehta marked paid for October 2026.</p><button class=\"ds-toast-action\">Undo</button></div>",
+      "css": ".ds-toast { font-family: var(--font, 'Mukta', system-ui, sans-serif); display: flex; align-items: center; gap: 8px; min-height: 56px; padding: 6px 6px 6px 16px; background: var(--ink, #1a1a1a); color: #fff; border-radius: var(--radius, 6px); animation: ds-toast-in 220ms var(--ease-out, cubic-bezier(0.16, 1, 0.3, 1)); } .ds-toast-msg { flex: 1; margin: 0; font-size: 0.9375rem; line-height: 1.35; } .ds-toast-action { font-family: var(--font, 'Mukta', system-ui, sans-serif); flex: none; min-height: 48px; padding: 0 14px; border: 0; border-radius: var(--radius, 6px); background: transparent; color: var(--teal-100, #e3f2f3); font-size: 1rem; font-weight: 800; cursor: pointer; } .ds-toast-action:hover, .ds-toast-action:active { background: rgb(255 255 255 / 0.12); } .ds-toast-action:focus-visible { outline: 2px solid var(--teal-100, #e3f2f3); outline-offset: 2px; } @keyframes ds-toast-in { from { opacity: 0; transform: translateY(8px); } } @media (prefers-reduced-motion: reduce) { .ds-toast { animation-name: ds-toast-fade; } @keyframes ds-toast-fade { from { opacity: 0; } } }"
+    },
+    {
+      "name": "Home Confirmation Line",
+      "kind": "custom",
+      "refersTo": "",
+      "description": "role=status line announcing the last change: deep teal 600 small text led by a teal CircleCheck.",
+      "html": "<p class=\"ds-flash\" role=\"status\"><svg aria-hidden=\"true\" width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"12\" cy=\"12\" r=\"10\"/><path d=\"m9 12 2 2 4-4\"/></svg>Saved Aarav Mehta.</p>",
+      "css": ".ds-flash { font-family: var(--font, 'Mukta', system-ui, sans-serif); display: flex; align-items: center; gap: 8px; min-height: 28px; margin: 0; color: var(--teal-900, #0b4f58); font-size: 0.9375rem; font-weight: 600; } .ds-flash svg { flex: none; color: var(--teal, #0f6e7a); }"
+    },
+    {
+      "name": "Inline Status Line",
+      "kind": "custom",
+      "refersTo": "inline-status",
+      "description": "One-line role=status confirmation next to the control it concerns: deep teal 600 small text with a 16px CircleCheck. Empty, it stays rendered with no margin so screen readers keep watching it.",
+      "html": "<p class=\"ds-inline-status\" role=\"status\"><svg aria-hidden=\"true\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"12\" cy=\"12\" r=\"10\"/><path d=\"m9 12 2 2 4-4\"/></svg>Added batch Weekend \u2013 Class 6.</p>",
+      "css": ".ds-inline-status { font-family: var(--font, 'Mukta', system-ui, sans-serif); display: flex; align-items: center; gap: 6px; margin: 8px 0 0; color: var(--teal-900, #0b4f58); font-size: 0.9375rem; font-weight: 600; } .ds-inline-status:empty { margin-top: 0; } .ds-inline-status svg { flex: none; }"
+    },
+    {
+      "name": "Empty Batch",
+      "kind": "custom",
+      "refersTo": "",
+      "description": "Muted line plus an Add text button between soft-rule hairlines, inside an open batch.",
+      "html": "<div class=\"ds-batch-empty\"><p>No students yet.</p><button class=\"ds-add\"><svg aria-hidden=\"true\" width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M5 12h14\"/><path d=\"M12 5v14\"/></svg>Add to this batch</button></div>",
+      "css": ".ds-batch-empty { font-family: var(--font, 'Mukta', system-ui, sans-serif); padding: 12px 0 4px; border-top: 1px solid var(--rule-soft, #e3e9ea); border-bottom: 1px solid var(--rule-soft, #e3e9ea); } .ds-batch-empty p { margin: 0; color: var(--ink-muted, #4d5b5e); } .ds-add { font-family: var(--font, 'Mukta', system-ui, sans-serif); display: inline-flex; align-items: center; gap: 6px; min-height: 48px; padding: 0 12px 0 8px; margin: 4px 0 4px -8px; border: 0; border-radius: var(--radius, 6px); background: transparent; color: var(--teal, #0f6e7a); font-weight: 600; font-size: 1rem; cursor: pointer; transition: background-color 160ms var(--ease-out, cubic-bezier(0.16, 1, 0.3, 1)); } .ds-add:hover { background: var(--teal-50, #f1f8f8); } .ds-add:active { background: var(--teal-100, #e3f2f3); } .ds-add:focus-visible { outline: 2px solid var(--teal, #0f6e7a); outline-offset: 2px; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The NCERT Textbook",
+    "overview": "Every screen reads like an interior page of the NCERT book the tutor already teaches from: a white offset-print page, a deep teal chapter band across the top, and content set as short numbered sections hanging off a teal gutter number. It is a printed world, not a software one. The page is flat, the ink is near-black, and there are only two inks of colour: NCERT teal for structure and every interactive accent, and marigold as the second ink for the Setup chapter numeral and Note boxes.\n\nDensity is calm and finite. One reading column, generous tap targets, sections that tell the reader how much is left. The system explicitly refuses the generic SaaS signup made of floating rounded fields on white: fields here are crisp outlined boxes sitting in the text column like answer blanks in a workbook, not cards.\n\nThe world is light-only by intent. It is used indoors, by day and under tube light, and it is meant to look printed.",
+    "keyCharacteristics": [
+      "Full-bleed teal chapter band opens every screen, with a heavy Mukta headline in white.",
+      "A solid marigold display numeral on the band opens the first chapter only (1 on Setup); every other screen's band has no numeral.",
+      "Section numbers (1.1, 1.2... in a chapter, 1 / 2 / 3 in other forms) in teal hang in a 40px gutter left of each section; lists of peers sit on the 20px page edge, unnumbered.",
+      "Marigold-tinted Note boxes with a bold \"Note\" lead, no side stripe.",
+      "1.5px teal-grey outlined inputs, 52px tall, small 6px corners.",
+      "Primary action pinned in a bottom dock at thumb height, with a plain-language hint line under it (or, on Home, a knocked-out teal Add block).",
+      "Lucide line icons throughout; motion is print-like: the band prints in on first launch, the chapter turns between screens, rows unroll and roll shut."
+    ],
+    "rules": [
+      {
+        "name": "The Two Inks Rule",
+        "body": "Teal and marigold are the only colours on the page beyond ink, rules and red error ink. New accents are not introduced.",
+        "section": "colors"
+      },
+      {
+        "name": "The Marigold Is Print Rule",
+        "body": "Solid marigold appears only on the teal band (the Setup chapter numeral). On white it is always a tint (marigold-tint) carrying marigold-ink text; never set solid marigold as text or as a control on white, which fails legibility. Marigold-ink is the one marigold text colour: on the tint, or on white for the Pending amount.",
+        "section": "colors"
+      },
+      {
+        "name": "The Teal Means Act Rule",
+        "body": "Every interactive affordance resolves to teal on hover or focus: input borders, text buttons, icon buttons, secondary buttons, batch headers, student rows, filter tabs, row actions, the CTA and the floating Add block. The one exception is delete, which stays in red ink. On a teal or ink ground (the band, the toast) teal cannot read, so controls there go white or teal-wash with a white-alpha hover.",
+        "section": "colors"
+      },
+      {
+        "name": "The Heavy Heading Rule",
+        "body": "Headings are Mukta 800, never a lighter display cut and never a second family.",
+        "section": "typography"
+      },
+      {
+        "name": "The Numbered Section Rule",
+        "body": "Section numbers are teal, 800, tabular, and hang outside the text column; they are never inline with the label or boxed. A chapter numbers its sections 1.1 to 1.n; a non-chapter form numbers its groups 1 / 2 / 3, the number hanging beside a Title-size group legend. Lists of peers, such as batches and students, are never numbered and never hang: they sit on the 20px page edge. The 40px hang exists only where a number sits in it.",
+        "section": "typography"
+      },
+      {
+        "name": "The Thumb Dock Rule",
+        "body": "A screen's one primary action sits full-width in the bottom dock, with a hint line under it that says, in plain words, what is still missing or what will happen. When the task needs a way out, the dock may pair it with Cancel (outlined secondary, 1fr) beside Save (primary, 2fr), hint line still underneath; it is still one primary action.",
+        "section": "layout"
+      },
+      {
+        "name": "The Printed Page Rule",
+        "body": "Surfaces never lift. If something needs separation, use a soft-rule hairline or a tint, not a shadow.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Knockout Exception",
+        "body": "The floating Add block is the one 10px outer radius: a 72px teal block inside a 4px page-white knockout border, so the teal itself still reads as an about-6px corner. It is not licence for larger radii anywhere else. Note boxes have no border and no side stripe; the tint is the container.",
+        "section": "shapes"
+      },
+      {
+        "name": "The Fades Only Rule",
+        "body": "Under prefers-reduced-motion nothing moves through space. The band opening becomes a 240ms fade of the headline and numeral; the chapter turn becomes a 160ms fade-out and 240ms fade-in with no group movement; rows, batch panels, Manage batches rows and the Inline Name Editor appear and disappear instantly (a delete commits at once); the list reflow is skipped; the delete confirm and the toast only fade.",
+        "section": "components"
+      }
+    ],
+    "dos": [
+      "Do open every screen with the full-bleed teal chapter band and a Mukta 800 headline in white.",
+      "Do number sections in teal hanging in the 40px gutter: 1.1, 1.2... in a chapter, 1 / 2 / 3 beside Title-size group legends in other forms. Set lists of peers on the 20px page edge, unnumbered.",
+      "Do use marigold-tint Note boxes with marigold-ink text for asides, led by a bold \"Note\".",
+      "Do put the primary action full-width in the bottom dock with a plain-language hint line under it; when the task needs a way out, pair it with an outlined Cancel at 1fr beside Save at 2fr.",
+      "Do place errors directly under their input in red ink with a Lucide icon, linked by aria-describedby.",
+      "Do use Lucide line icons and keep tap targets at least 48px.",
+      "Do show status as a word plus an icon (Clock for Pending, Check for Paid), never colour alone.",
+      "Do give any new motion a prefers-reduced-motion fallback that fades without spatial movement, and keep the exponential ease-out (cubic-bezier(0.16, 1, 0.3, 1)) for entrances."
+    ],
+    "donts": [
+      "Don't add drop shadows or floating cards; the page is flat print.",
+      "Don't set solid marigold on white or use solid marigold for text; it is the band ink or a tint, and marigold-ink is its only text colour.",
+      "Don't add a side stripe or border to Note boxes.",
+      "Don't build a dark theme; the world is light-only by intent.",
+      "Don't use large or pill radii; corners are 6px. The floating Add block's 10px outer radius is a knockout exception, not a precedent.",
+      "Don't put a chapter numeral on any band but Setup's.",
+      "Don't use red ink for anything but errors and delete.",
+      "Don't introduce a second typeface or a third accent colour.",
+      "Don't indent lists on the 40px gutter; it is only for numbered sections."
+    ]
+  }
+}

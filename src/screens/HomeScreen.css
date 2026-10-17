@@ -1,0 +1,676 @@
+/* Keyboard scrolling keeps focused rows clear of the floating "+" and toast. */
+html:has(.home .fab) {
+  scroll-padding-bottom: calc(104px + var(--nav-h) + env(safe-area-inset-bottom));
+}
+
+.home {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}
+
+.home-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  /* Bottom room so the floating button never covers the last row. */
+  padding: 12px var(--gutter) calc(112px + var(--nav-h) + env(safe-area-inset-bottom));
+}
+
+.home-body.is-empty {
+  padding-bottom: calc(20px + var(--nav-h) + env(safe-area-inset-bottom));
+}
+
+/* Last-change confirmation; empty until something happens */
+.home-flash {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 28px;
+  color: var(--teal-900);
+  font-size: 0.9375rem;
+  font-weight: 600;
+}
+
+.home-flash:empty {
+  min-height: 12px;
+}
+
+.home-flash:not(:empty) {
+  margin-bottom: 16px;
+}
+
+.home-flash svg {
+  flex: none;
+  color: var(--teal);
+}
+
+/* Batch groups sit on the page edge with the summary and tabs (user preference:
+   no 40px hang on lists). Unnumbered: batches are peers in no meaningful order. */
+.batch-group {
+  position: relative;
+}
+
+.batch-group + .batch-group {
+  margin-top: 8px;
+}
+
+/* One message to every guardian in the batch, at the foot of its open panel */
+.batch-message {
+  margin-top: 8px;
+}
+
+/* All tab: unpaid fees whose due date is still ahead, in due-date order */
+.upcoming-group {
+  margin-top: 20px;
+}
+
+.upcoming-heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 10px;
+  margin: 0;
+  padding: 10px 0;
+  font-size: 1.25rem;
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+.batch-heading {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+/* The whole header is the toggle */
+.batch-toggle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: calc(100% + 16px);
+  min-height: 60px;
+  margin: 0 -8px;
+  padding: 10px 8px;
+  border: 0;
+  border-radius: var(--radius);
+  background: transparent;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+  transition: background-color 160ms var(--ease-out);
+}
+
+.batch-toggle:hover {
+  background: var(--teal-50);
+}
+
+.batch-toggle:active {
+  background: var(--teal-100);
+}
+
+.batch-toggle:focus-visible {
+  outline-offset: -2px;
+}
+
+.batch-name {
+  flex: 1;
+  min-width: 0;
+  text-wrap: balance;
+  overflow-wrap: anywhere;
+}
+
+.batch-count {
+  flex: none;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--ink-muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.batch-chevron {
+  flex: none;
+  color: var(--teal);
+  transition: rotate 220ms var(--ease-out);
+}
+
+.batch-group.is-open .batch-chevron {
+  rotate: 180deg;
+}
+
+/* Unroll / roll shut, the world's row motion */
+.batch-panel {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 200ms ease-in;
+}
+
+.batch-group.is-open .batch-panel {
+  grid-template-rows: 1fr;
+  transition: grid-template-rows 280ms var(--ease-out);
+}
+
+.batch-panel-inner {
+  min-height: 0;
+  overflow: hidden;
+}
+
+.batch-group.is-open .batch-panel-inner {
+  padding-bottom: 12px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .batch-panel,
+  .batch-group.is-open .batch-panel,
+  .batch-chevron {
+    transition: none;
+  }
+}
+
+.student-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid var(--rule-soft);
+}
+
+.student-list > li {
+  border-bottom: 1px solid var(--rule-soft);
+}
+
+/* Student row: details (opens edit) + status badge, then the row's actions.
+   Phones stack the actions full-width under the details for thumb reach. */
+.student-item {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-areas:
+    'open badge'
+    'actions actions';
+  gap: 8px 12px;
+  padding: 10px 0 12px;
+}
+
+.student-open {
+  grid-area: open;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  min-height: var(--tap);
+  margin: -4px -8px;
+  padding: 4px 8px;
+  border: 0;
+  border-radius: var(--radius);
+  background: transparent;
+  text-align: left;
+  cursor: pointer;
+  transition: background-color 160ms var(--ease-out);
+}
+
+.student-open:hover {
+  background: var(--teal-50);
+}
+
+.student-open:active {
+  background: var(--teal-100);
+}
+
+.student-open:focus-visible {
+  outline-offset: -2px;
+}
+
+.student-name {
+  font-size: 1.0625rem;
+  font-weight: 600;
+  line-height: 1.3;
+  overflow-wrap: anywhere;
+}
+
+/* "Opens edit" cue that works without hover */
+.student-open-cue {
+  display: inline-block;
+  margin-left: 2px;
+  vertical-align: -3px;
+  color: var(--ink-muted);
+  transition: translate 160ms var(--ease-out);
+}
+
+.student-open:hover .student-open-cue {
+  color: var(--teal);
+  translate: 2px 0;
+}
+
+.student-meta {
+  font-size: 0.9375rem;
+  color: var(--ink-muted);
+}
+
+.student-due {
+  white-space: nowrap;
+}
+
+.student-fee {
+  font-weight: 600;
+  color: var(--ink);
+  font-variant-numeric: tabular-nums;
+}
+
+/* Status: always a word and an icon, never colour alone */
+.status-badge {
+  grid-area: badge;
+  align-self: start;
+  justify-self: end;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 2px;
+  padding: 3px 8px;
+  border-radius: var(--radius);
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.status-badge.is-due {
+  background: var(--marigold-100);
+  color: var(--marigold-ink);
+}
+
+/* Not owed yet: a quiet outline, so Due keeps the only warm tint */
+.status-badge.is-upcoming {
+  padding: 2px 7px;
+  border: 1px solid var(--rule);
+  color: var(--ink-muted);
+}
+
+.status-badge.is-paid {
+  background: var(--teal-100);
+  color: var(--teal-900);
+}
+
+.student-actions {
+  grid-area: actions;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+/* Paid rows have one quiet action: it tucks under the badge, keeping the row short. */
+.student-item.is-paid {
+  grid-template-areas:
+    'open badge'
+    'open actions';
+  row-gap: 0;
+}
+
+.student-item.is-paid .student-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.row-action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-height: var(--tap);
+  padding: 0 14px;
+  border: 0;
+  border-radius: var(--radius);
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    background-color 160ms var(--ease-out),
+    transform 120ms var(--ease-out);
+}
+
+.row-action:active {
+  transform: scale(0.985);
+}
+
+.row-action-primary {
+  background: var(--teal);
+  color: #fff;
+}
+
+.row-action-primary:hover {
+  background: var(--teal-900);
+}
+
+/* A student who left has no Remind, so Mark paid takes the whole row */
+.row-action-primary:only-child {
+  grid-column: 1 / -1;
+}
+
+.row-action-secondary {
+  background: var(--page);
+  color: var(--teal);
+  border: 1.5px solid var(--teal);
+}
+
+.row-action-secondary:hover {
+  background: var(--teal-50);
+}
+
+/* A teal text button: quieter than Mark paid, but clearly an action (Teal Means Act). */
+.row-action-quiet {
+  margin-right: -8px;
+  padding: 0 8px;
+  background: transparent;
+  color: var(--teal);
+}
+
+.row-action-quiet:hover {
+  background: var(--teal-50);
+}
+
+.row-action-quiet:active {
+  background: var(--teal-100);
+}
+
+/* Wider screens: actions move up beside the badge on one line */
+@media (min-width: 46rem) {
+  .student-item {
+    grid-template-columns: 1fr auto auto;
+    grid-template-areas: 'open badge actions';
+    align-items: center;
+  }
+
+  .status-badge {
+    align-self: center;
+    margin-top: 0;
+  }
+
+  .student-actions {
+    grid-template-columns: auto auto;
+  }
+}
+
+.batch-empty {
+  padding: 12px 0 4px;
+  border-top: 1px solid var(--rule-soft);
+  border-bottom: 1px solid var(--rule-soft);
+}
+
+.batch-empty p {
+  color: var(--ink-muted);
+}
+
+.batch-empty .add-button {
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+/* Empty state: no students at all */
+/* Message near the top, the Add button down in thumb reach. */
+.home-empty {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding-top: 24px;
+}
+
+.home-empty-title {
+  font-size: 1.25rem;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.home-empty-note {
+  margin-top: 12px;
+  text-wrap: pretty;
+}
+
+.home-empty-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: auto;
+}
+
+/* Floating add button: a printed teal block knocked out of the page with a
+   page-white border (print knockout, not a shadow), so it reads as sitting on
+   the page rather than colliding with the rows beneath it. */
+.fab {
+  position: fixed;
+  right: calc(var(--gutter) - 4px);
+  bottom: calc(16px + var(--nav-h) + env(safe-area-inset-bottom));
+  width: 72px;
+  height: 72px;
+  display: grid;
+  place-items: center;
+  border: 4px solid var(--page);
+  border-radius: 10px; /* 6px corner on the teal block inside the 4px knockout */
+  background: var(--teal);
+  background-clip: padding-box;
+  color: #fff;
+  cursor: pointer;
+  transition:
+    background-color 160ms var(--ease-out),
+    transform 120ms var(--ease-out);
+}
+
+.fab:hover {
+  background: var(--teal-900);
+}
+
+.fab:active {
+  transform: scale(0.96);
+}
+
+/* Wide screens: move it into the right margin, clear of fees and chevrons. */
+@media (min-width: 46rem) {
+  .fab {
+    right: calc((100vw - var(--column)) / 2 - 88px);
+  }
+}
+
+/* ---------------------------------------------------------------------------
+   Month switcher (inside the teal band)
+   ------------------------------------------------------------------------- */
+.month-switcher {
+  display: flex;
+  align-items: center;
+  margin: 8px 0 -10px -12px;
+}
+
+.month-step {
+  width: var(--tap);
+  height: var(--tap);
+  display: grid;
+  place-items: center;
+  border: 0;
+  border-radius: var(--radius);
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 160ms var(--ease-out);
+}
+
+.month-step:hover:not(:disabled) {
+  background: rgb(255 255 255 / 0.12);
+}
+
+.month-step:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+
+.month-step:focus-visible {
+  outline-color: #fff;
+}
+
+.month-label {
+  min-width: 8.5em;
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #fff;
+}
+
+/* ---------------------------------------------------------------------------
+   Summary strip: a small printed table, not dashboard tiles
+   ------------------------------------------------------------------------- */
+.summary {
+  margin-bottom: 16px;
+}
+
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 0;
+  border-block: 1px solid var(--rule);
+}
+
+.summary-cell {
+  min-width: 0;
+  padding: 10px 10px 12px;
+}
+
+.summary-cell:first-child {
+  padding-left: 0;
+}
+
+.summary-cell + .summary-cell {
+  border-left: 1px solid var(--rule-soft);
+}
+
+.summary-cell dt {
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--ink-muted);
+}
+
+.summary-cell dd {
+  margin: 2px 0 0;
+  font-size: 1.25rem;
+  font-weight: 800;
+  line-height: 1.2;
+  font-variant-numeric: tabular-nums;
+  overflow-wrap: anywhere;
+}
+
+.summary-unit {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--ink-muted);
+}
+
+.summary-cell:nth-child(2) dd {
+  color: var(--marigold-ink);
+}
+
+/* ---------------------------------------------------------------------------
+   Filter tabs
+   ------------------------------------------------------------------------- */
+.tabs-anchor:focus {
+  outline: none;
+}
+
+.filter-tabs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-bottom: 8px;
+  border-bottom: 1px solid var(--rule-soft);
+}
+
+.filter-tab {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-height: var(--tap);
+  border: 0;
+  border-radius: var(--radius) var(--radius) 0 0;
+  background: transparent;
+  color: var(--ink-muted);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 160ms var(--ease-out);
+}
+
+.filter-tab:hover {
+  background: var(--teal-50);
+}
+
+.filter-tab:focus-visible {
+  outline-offset: -2px;
+}
+
+.filter-tab[aria-selected='true'] {
+  color: var(--teal-900);
+  font-weight: 800;
+}
+
+.filter-tab[aria-selected='true']::after {
+  content: '';
+  position: absolute;
+  left: 8px;
+  right: 8px;
+  bottom: -1px;
+  height: 3px;
+  background: var(--teal);
+}
+
+.filter-count {
+  min-width: 24px;
+  padding: 0 6px;
+  border-radius: var(--radius);
+  background: var(--rule-soft);
+  color: var(--ink);
+  font-size: 0.875rem;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.filter-tab[aria-selected='true'] .filter-count {
+  background: var(--teal-100);
+  color: var(--teal-900);
+}
+
+.fee-empty {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 20px 0;
+  color: var(--teal-900);
+  font-weight: 600;
+}
+
+/* ---------------------------------------------------------------------------
+   List reflow (view transition, kind "list"): rows slide into place and a row
+   leaving the tab fades out; the page itself doesn't crossfade.
+   ------------------------------------------------------------------------- */
+/* Rows carry their inline view-transition-name only during a list reflow, and never
+   inside a closed batch. A named element is drawn above the page and ignores its
+   ancestors' clipping, so on a screen change every row of every collapsed batch would
+   flash into view before snapping shut. */
+html:not(.vt-list) .student-item,
+.batch-panel[inert] .student-item {
+  view-transition-name: none !important;
+}
+
+html.vt-list::view-transition-old(root),
+html.vt-list::view-transition-new(root) {
+  animation: none;
+}
+
+html.vt-list::view-transition-group(*) {
+  animation-duration: 280ms;
+  animation-timing-function: var(--ease-out);
+}
+
+html.vt-list::view-transition-old(*):only-child {
+  animation: fade-out 160ms ease-in both;
+}
+
+html.vt-list::view-transition-new(*):only-child {
+  animation: fade-in 220ms var(--ease-out) both;
+}
+

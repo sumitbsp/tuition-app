@@ -1,0 +1,71 @@
+/* Printed in ink: a flat dark block, no shadow. On phones it leaves room for
+   the floating Add button; on wide screens it sits within the page column. */
+.toast-region {
+  position: fixed;
+  left: var(--gutter);
+  right: calc(var(--gutter) + 84px);
+  bottom: calc(20px + var(--nav-h) + env(safe-area-inset-bottom));
+  z-index: 10;
+  pointer-events: none;
+}
+
+@media (min-width: 46rem) {
+  .toast-region {
+    left: calc((100vw - var(--column)) / 2 + var(--gutter));
+    right: calc((100vw - var(--column)) / 2 + var(--gutter));
+  }
+}
+
+.toast {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 56px;
+  padding: 6px 6px 6px 16px;
+  background: var(--ink);
+  color: #fff;
+  border-radius: var(--radius);
+  pointer-events: auto;
+  animation: toast-in 220ms var(--ease-out);
+}
+
+.toast-message {
+  flex: 1;
+  font-size: 0.9375rem;
+  line-height: 1.35;
+}
+
+.toast-action {
+  flex: none;
+  min-height: var(--tap);
+  padding: 0 14px;
+  border: 0;
+  border-radius: var(--radius);
+  background: transparent;
+  color: var(--teal-100);
+  font-size: 1rem;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.toast-action:hover,
+.toast-action:active {
+  background: rgb(255 255 255 / 0.12);
+}
+
+.toast-action:focus-visible {
+  outline-color: var(--teal-100);
+}
+
+@keyframes toast-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .toast {
+    animation-name: fade-in;
+  }
+}

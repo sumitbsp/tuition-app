@@ -1,0 +1,81 @@
+/* Design tokens: NCERT textbook interior.
+   Light only by intent: a printed-page world used indoors, by day and under tube light. */
+:root {
+  --teal-900: #0b4f58;
+  --teal: #0f6e7a;
+  --teal-100: #e3f2f3;
+  --teal-50: #f1f8f8;
+  --marigold: #f4b63f;
+  --marigold-100: #fdf0d2;
+  --marigold-ink: #5c3d00;
+  --ink: #1a1a1a;
+  --ink-muted: #4d5b5e;
+  --ink-placeholder: #6b7778;
+  --rule: #9db8bb;
+  --rule-soft: #e3e9ea;
+  --error: #b3261e;
+  --error-50: #fdf1f0;
+  --page: #ffffff;
+
+  --font: 'Mukta', system-ui, sans-serif;
+  --radius: 6px;
+  --tap: 48px;
+  --gutter: 20px;
+  --column: 34rem;
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  /* Height of the bottom nav above the safe area; 0 on screens without it (see .with-nav). */
+  --nav-h: 0px;
+
+  color-scheme: light;
+  scrollbar-color: var(--rule) transparent;
+  font-family: var(--font);
+  font-size: 17px;
+  line-height: 1.45;
+  color: var(--ink);
+  background: var(--page);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--page);
+  -webkit-tap-highlight-color: transparent;
+}
+
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+button,
+input,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+::selection {
+  background: var(--teal-100);
+  color: var(--teal-900);
+}
+
+:focus-visible {
+  outline: 2px solid var(--teal);
+  outline-offset: 2px;
+}
+
+.column {
+  width: 100%;
+  max-width: var(--column);
+  margin-inline: auto;
+}

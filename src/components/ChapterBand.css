@@ -1,0 +1,206 @@
+/* Chapter band: teal page head with the marigold chapter numeral. */
+.chapter-band {
+  view-transition-name: chapter-band;
+  background: var(--teal);
+  color: #fff;
+  padding: calc(32px + env(safe-area-inset-top)) 0 28px;
+}
+
+.chapter-band-inner {
+  /* Gutter inside the column so band text lines up with the page column below. */
+  padding-inline: var(--gutter);
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.chapter-text {
+  view-transition-name: chapter-text;
+  min-width: 0;
+}
+
+.chapter-title {
+  font-size: clamp(1.75rem, 7.4vw, 2.25rem);
+  line-height: 1.08;
+  font-weight: 800;
+  letter-spacing: -0.012em;
+  text-wrap: balance;
+  overflow-wrap: anywhere;
+}
+
+.chapter-title:focus {
+  outline: none;
+}
+
+.chapter-sub {
+  margin-top: 10px;
+  text-wrap: pretty;
+  color: var(--teal-100);
+  font-size: 1rem;
+}
+
+/* Chapter-opener numeral, printed in the world's second ink. */
+.chapter-numeral {
+  view-transition-name: chapter-numeral;
+  flex: none;
+  font-size: clamp(5rem, 24vw, 6rem);
+  line-height: 0.78;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  color: var(--marigold);
+  font-variant-numeric: lining-nums;
+  margin-bottom: -2px;
+}
+
+/* ---------------------------------------------------------------------------
+   1. First-launch opening (~780ms, never blocks input).
+   The band unrolls downward, the heading settles, then the numeral prints
+   upward like ink. The form below is visible and usable throughout.
+   ------------------------------------------------------------------------- */
+.chapter-band.is-opening {
+  animation: band-unroll 520ms var(--ease-out) both;
+}
+
+.chapter-band.is-opening .chapter-text {
+  animation: text-settle 520ms var(--ease-out) 140ms both;
+}
+
+.chapter-band.is-opening .chapter-numeral {
+  animation: numeral-print 480ms var(--ease-out) 300ms both;
+}
+
+@keyframes band-unroll {
+  from {
+    clip-path: inset(0 0 100% 0);
+  }
+  to {
+    clip-path: inset(0);
+  }
+}
+
+@keyframes text-settle {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+}
+
+@keyframes numeral-print {
+  from {
+    clip-path: inset(100% 0 0 0);
+  }
+  to {
+    clip-path: inset(0);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+}
+
+@keyframes fade-out {
+  to {
+    opacity: 0;
+  }
+}
+
+/* ---------------------------------------------------------------------------
+   2. Turning the chapter: Setup → Home (view transition).
+   The band holds its place; the old numeral and heading lift away and the
+   next chapter's rise in. Everything else crossfades quickly.
+   ------------------------------------------------------------------------- */
+::view-transition-group(chapter-band) {
+  animation-duration: 420ms;
+  animation-timing-function: var(--ease-out);
+}
+
+::view-transition-old(root) {
+  animation: fade-out 180ms ease-out both;
+}
+
+::view-transition-new(root) {
+  animation: fade-in 300ms var(--ease-out) 120ms both;
+}
+
+/* Draw text snapshots at their natural size instead of stretching them. */
+::view-transition-old(chapter-text),
+::view-transition-new(chapter-text),
+::view-transition-old(chapter-numeral),
+::view-transition-new(chapter-numeral) {
+  height: 100%;
+  object-fit: none;
+  object-position: left bottom;
+}
+
+::view-transition-old(chapter-text) {
+  animation: lift-away 200ms ease-in both;
+}
+
+::view-transition-new(chapter-text) {
+  animation: rise-in 420ms var(--ease-out) 120ms both;
+}
+
+::view-transition-old(chapter-numeral) {
+  animation: numeral-turn-out 240ms ease-in both;
+}
+
+::view-transition-new(chapter-numeral) {
+  animation: numeral-turn-in 460ms var(--ease-out) 160ms both;
+}
+
+@keyframes lift-away {
+  to {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+}
+
+@keyframes numeral-turn-out {
+  to {
+    opacity: 0;
+    transform: translateY(-30%);
+  }
+}
+
+@keyframes numeral-turn-in {
+  from {
+    opacity: 0;
+    transform: translateY(30%);
+  }
+}
+
+/* Reduced motion: no spatial movement; keep gentle fades so the change still reads. */
+@media (prefers-reduced-motion: reduce) {
+  .chapter-band.is-opening {
+    animation: none;
+  }
+
+  .chapter-band.is-opening .chapter-text,
+  .chapter-band.is-opening .chapter-numeral {
+    animation: fade-in 240ms ease-out both;
+  }
+
+  ::view-transition-group(*) {
+    animation-duration: 0s;
+  }
+
+  ::view-transition-old(chapter-text),
+  ::view-transition-old(chapter-numeral) {
+    animation: fade-out 160ms ease-out both;
+  }
+
+  ::view-transition-new(chapter-text),
+  ::view-transition-new(chapter-numeral) {
+    animation: fade-in 240ms ease-out both;
+  }
+}

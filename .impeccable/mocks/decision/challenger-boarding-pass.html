@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&family=Archivo:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:390px;height:844px;overflow:hidden}
+body{background:#E2E2DD;color:#111;font-family:Archivo,system-ui,sans-serif;position:relative}
+.head{padding:28px 20px 16px}
+h1{font-size:28px;line-height:1.08;font-weight:800;letter-spacing:-.02em}
+.sub{font-size:15px;margin-top:8px;color:#4A4A46}
+.pass{margin:0 14px;background:#F4F4F1;border-radius:14px;overflow:hidden}
+.seg{padding:12px 16px;border-bottom:1px solid #D4D4CE}
+.lab{font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;letter-spacing:.1em;color:#8A8A85}
+.val{font-size:20px;font-weight:600;margin-top:4px;min-height:28px}
+.val.mono{font-family:'JetBrains Mono',monospace;font-size:19px;font-variant-numeric:tabular-nums}
+.val.ph{color:#A8A8A2;font-weight:400}
+.err{color:#FF5A1F;font-size:13px;font-weight:600;margin-top:4px}
+.help{font-size:12px;color:#6A6A65;margin-top:4px}
+.tear{height:0;border-top:2px dashed #BDBDB6;margin:0 10px;position:relative}
+.rows{padding:8px 16px 12px}
+.r{display:flex;align-items:center;justify-content:space-between;height:46px;border-bottom:1px solid #E4E4DF;font-size:17px}
+.r span.n{font-family:'JetBrains Mono',monospace;font-size:12px;color:#8A8A85;width:28px}
+.r .t{flex:1}
+.r .x{width:44px;text-align:center;font-size:20px}
+.add{height:44px;display:flex;align-items:center;font-weight:600}
+.dock{position:absolute;left:0;right:0;bottom:0;padding:12px 14px 28px;background:#E2E2DD}
+.cta{height:56px;border-radius:12px;background:#111;color:#fff;font-size:18px;font-weight:600;display:grid;place-items:center}
+</style></head><body>
+<div class="head">
+  <h1>Welcome! Let's set up your tuition app.</h1>
+  <p class="sub">One pass, about a minute.</p>
+</div>
+<div class="pass">
+  <div class="seg"><div class="lab">TUTOR</div><div class="val">Ritu Sharma</div></div>
+  <div class="seg"><div class="lab">PHONE</div><div class="val mono">98765 4321</div><div class="err">Needs 10 digits</div></div>
+  <div class="seg"><div class="lab">UPI · OPTIONAL</div><div class="val ph">ritu@okaxis</div><div class="help">You can add this later in Settings. It adds a payment link to reminders.</div></div>
+  <div class="tear"></div>
+  <div class="rows">
+    <div class="lab" style="margin:6px 0 2px">BATCHES</div>
+    <div class="r"><span class="n">01</span><span class="t">Evening – Class 8</span><span class="x">×</span></div>
+    <div class="r"><span class="n">02</span><span class="t" style="color:#A8A8A2">e.g. Evening – Class 8</span><span class="x">×</span></div>
+    <div class="add">+ Add another batch</div>
+  </div>
+</div>
+<div class="dock"><div class="cta">Get started</div></div>
+</body></html>

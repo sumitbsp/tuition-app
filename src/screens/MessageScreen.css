@@ -1,0 +1,220 @@
+/* Message batch: compose, send one by one, summary. On the page edge (no hang on lists). */
+.message-body {
+  padding-top: 20px;
+}
+
+.message-reach {
+  font-size: 1.0625rem;
+}
+
+.message-group {
+  margin-top: 24px;
+}
+
+.message-heading {
+  margin: 0 0 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.skip-list {
+  list-style: none;
+  margin: 6px 0 0;
+  padding: 0;
+  border-top: 1px solid var(--rule-soft);
+}
+
+.skip-list > li {
+  padding: 10px 0;
+  border-bottom: 1px solid var(--rule-soft);
+  font-weight: 600;
+}
+
+/* Dock: two equal buttons, since "Copy message" needs the room */
+.message-actions {
+  grid-template-columns: 1fr 1fr;
+}
+
+.message-actions .button-secondary,
+.cta-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.cta-link {
+  text-decoration: none;
+}
+
+.message-copy-status {
+  justify-content: center;
+}
+
+.message-cancel {
+  display: flex;
+  margin: 4px auto 0;
+  padding: 0 12px;
+}
+
+/* --- Sending ---------------------------------------------------------------- */
+.send-card {
+  padding-bottom: 20px;
+}
+
+.send-progress {
+  color: var(--teal-900);
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+}
+
+.send-meter {
+  height: 4px;
+  margin: 8px 0 16px;
+  border-radius: 2px;
+  background: linear-gradient(to right, var(--teal) calc(var(--done) * 100%), var(--rule-soft) 0);
+}
+
+.send-current {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 800;
+  line-height: 1.2;
+  overflow-wrap: anywhere;
+}
+
+.send-detail {
+  margin-top: 4px;
+  color: var(--ink-muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.send-hint {
+  margin-top: 12px;
+}
+
+.send-again {
+  color: var(--teal);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.send-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid var(--rule-soft);
+}
+
+.send-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--rule-soft);
+}
+
+.send-who {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.send-name {
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+.send-item.is-current .send-name {
+  font-weight: 800;
+}
+
+.send-students {
+  font-size: 0.9375rem;
+  color: var(--ink-muted);
+}
+
+/* Always a word (and for Sent an icon), never colour alone */
+.send-badge {
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 8px;
+  border-radius: var(--radius);
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--ink-muted);
+}
+
+.send-badge.is-sent {
+  background: var(--teal-100);
+  color: var(--teal-900);
+}
+
+.send-badge.is-current {
+  background: var(--marigold-100);
+  color: var(--marigold-ink);
+}
+
+.send-badge.is-skipped,
+.send-badge.is-not-sent {
+  padding: 2px 7px;
+  border: 1px solid var(--rule);
+}
+
+.send-stop {
+  margin-top: 16px;
+}
+
+/* --- Summary ---------------------------------------------------------------- */
+.message-summary-title {
+  margin: 0 0 12px;
+  font-size: 1.25rem;
+  font-weight: 800;
+}
+
+.message-summary-title:focus {
+  outline: none;
+}
+
+.message-summary {
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-auto-flow: column;
+  margin: 0 0 20px;
+  border-block: 1px solid var(--rule);
+}
+
+.message-stat {
+  min-width: 0;
+  padding: 10px 10px 12px;
+}
+
+.message-stat:first-child {
+  padding-left: 0;
+}
+
+.message-stat + .message-stat {
+  border-left: 1px solid var(--rule-soft);
+}
+
+.message-summary dt {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--ink-muted);
+}
+
+.message-summary dd {
+  margin: 2px 0 0;
+  font-size: 1.25rem;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+}
+
+.message-summary-note {
+  margin-top: 16px;
+}

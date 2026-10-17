@@ -1,0 +1,593 @@
+/* Shared form and screen styles (Setup, Student). See DESIGN.md → Components. */
+.screen {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}
+
+.screen-form {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.screen-body {
+  flex: 1;
+  padding: 28px var(--gutter) 36px;
+}
+
+/* Numbered sections */
+.section {
+  position: relative;
+  padding: 0 0 0 40px;
+  margin: 0;
+  border: 0;
+  min-width: 0;
+}
+
+.section + .section {
+  margin-top: 28px;
+}
+
+.section-num {
+  position: absolute;
+  left: 0;
+  top: 1px;
+  color: var(--teal);
+  font-weight: 800;
+  font-size: 0.95rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.section-label {
+  display: block;
+  padding: 0;
+  margin-bottom: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.3;
+}
+
+.optional {
+  font-weight: 400;
+  color: var(--ink-muted);
+}
+
+/* Inputs */
+.text-input {
+  display: block;
+  width: 100%;
+  height: 52px;
+  padding: 0 14px;
+  font-size: 1.0625rem; /* ≥16px so iOS doesn't zoom on focus */
+  background: var(--page);
+  border: 1.5px solid var(--rule);
+  border-radius: var(--radius);
+  caret-color: var(--teal);
+  transition:
+    border-color 160ms var(--ease-out),
+    box-shadow 160ms var(--ease-out);
+}
+
+/* iOS Safari centres the date and drops the fixed height unless told otherwise */
+.text-input[type='date'] {
+  appearance: none;
+  -webkit-appearance: none;
+  display: flex;
+  align-items: center;
+  text-align: left;
+}
+
+.text-input[type='date']::-webkit-date-and-time-value {
+  text-align: left;
+}
+
+.text-input::placeholder {
+  color: var(--ink-placeholder);
+  opacity: 1;
+}
+
+.text-input:hover {
+  border-color: var(--teal);
+}
+
+/* :focus, not :focus-visible: fields focused by script (e.g. "first invalid
+   field" after pressing Save) must show it too, including selects. */
+.text-input:focus {
+  outline: none;
+  border-color: var(--teal);
+  box-shadow: 0 0 0 3px var(--teal-100);
+}
+
+.text-input[aria-invalid='true'] {
+  border-color: var(--error);
+}
+
+.text-input[aria-invalid='true']:focus {
+  box-shadow: 0 0 0 3px var(--error-50);
+  outline: 2px solid var(--error);
+  outline-offset: 2px;
+}
+
+/* Help, notes, errors */
+.note {
+  margin-top: 8px;
+}
+
+.help {
+  font-size: 0.9375rem;
+  line-height: 1.4;
+  color: var(--ink-muted);
+}
+
+.note-box {
+  padding: 10px 12px;
+  background: var(--marigold-100);
+  color: var(--marigold-ink);
+  border-radius: var(--radius);
+  font-size: 0.9375rem;
+  line-height: 1.4;
+}
+
+.note-box strong {
+  font-weight: 800;
+  margin-right: 4px;
+}
+
+.field-error {
+  display: flex;
+  gap: 6px;
+  align-items: flex-start;
+  margin-top: 8px;
+  color: var(--error);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.field-error svg {
+  flex: none;
+  margin-top: 2px;
+}
+
+.icon-button {
+  flex: none;
+  width: var(--tap);
+  height: var(--tap);
+  display: grid;
+  place-items: center;
+  padding: 0;
+  border: 0;
+  border-radius: var(--radius);
+  background: transparent;
+  color: var(--ink-muted);
+  cursor: pointer;
+  transition:
+    background-color 160ms var(--ease-out),
+    color 160ms var(--ease-out);
+}
+
+.icon-button:hover {
+  background: var(--teal-50);
+  color: var(--teal);
+}
+
+.icon-button:active {
+  background: var(--teal-100);
+}
+
+.add-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: var(--tap);
+  padding: 0 12px 0 8px;
+  margin-left: -8px;
+  border: 0;
+  border-radius: var(--radius);
+  background: transparent;
+  color: var(--teal);
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 160ms var(--ease-out);
+}
+
+.add-button:hover {
+  background: var(--teal-50);
+}
+
+.add-button:active {
+  background: var(--teal-100);
+}
+
+/* Bottom dock: the screen's one primary action at thumb height */
+.dock {
+  position: sticky;
+  bottom: 0;
+  background: var(--page);
+  border-top: 1px solid var(--rule-soft);
+  padding: 12px var(--gutter) calc(14px + env(safe-area-inset-bottom));
+}
+
+.cta {
+  display: block;
+  width: 100%;
+  height: 56px;
+  border: 0;
+  border-radius: var(--radius);
+  background: var(--teal);
+  color: #fff;
+  font-size: 1.125rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background-color 160ms var(--ease-out),
+    transform 120ms var(--ease-out);
+}
+
+.cta:hover:not(:disabled, [aria-disabled='true']) {
+  background: var(--teal-900);
+}
+
+.cta:active:not(:disabled, [aria-disabled='true']) {
+  transform: scale(0.985);
+}
+
+.cta:disabled,
+.cta[aria-disabled='true'] {
+  background: var(--rule-soft);
+  color: var(--ink-muted);
+  cursor: not-allowed;
+}
+
+.cta-hint {
+  margin-top: 8px;
+  text-align: center;
+  font-size: 0.9375rem;
+  color: var(--ink-muted);
+}
+
+.save-error {
+  margin: 0 0 10px;
+}
+
+.save-error .field-error {
+  margin-top: 0;
+}
+
+/* Un-numbered field inside a numbered group (Student form) */
+.field + .field {
+  margin-top: 20px;
+}
+
+.group-title {
+  display: block;
+  padding: 0;
+  margin-bottom: 14px;
+  font-size: 1.25rem;
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+.group-title + * {
+  clear: both;
+}
+
+fieldset.section > legend.group-title {
+  float: left;
+  width: 100%;
+}
+
+/* Group numbers sit on the larger group title's first line */
+.group-title .section-num {
+  top: 5px;
+}
+
+/* Native select dressed as a text input, with a drawn chevron */
+.select-wrap {
+  position: relative;
+}
+
+/* Nothing chosen yet: the prompt option reads as a placeholder */
+.select-wrap .text-input:invalid {
+  color: var(--ink-placeholder);
+}
+
+.select-wrap .text-input {
+  appearance: none;
+  padding-right: 44px;
+  cursor: pointer;
+}
+
+.select-wrap svg {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  translate: 0 -50%;
+  color: var(--ink-muted);
+  pointer-events: none;
+}
+
+/* Input with a leading unit (₹) */
+.affix-wrap {
+  position: relative;
+}
+
+.affix {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  translate: 0 -50%;
+  color: var(--ink-muted);
+  font-size: 1.0625rem;
+  font-weight: 600;
+  pointer-events: none;
+}
+
+.affix-wrap .text-input {
+  padding-left: 32px;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Two-button dock: secondary + primary */
+.dock-actions {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 10px;
+}
+
+.button-secondary {
+  height: 56px;
+  border: 1.5px solid var(--teal);
+  border-radius: var(--radius);
+  background: var(--page);
+  color: var(--teal);
+  font-size: 1.125rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background-color 160ms var(--ease-out),
+    transform 120ms var(--ease-out);
+}
+
+.button-secondary:hover {
+  background: var(--teal-50);
+}
+
+.button-secondary:active {
+  background: var(--teal-100);
+  transform: scale(0.985);
+}
+
+/* Destructive: red ink, used only for delete */
+.danger-text-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: var(--tap);
+  padding: 0 12px 0 8px;
+  margin-left: -8px;
+  border: 0;
+  border-radius: var(--radius);
+  background: transparent;
+  color: var(--error);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 160ms var(--ease-out);
+}
+
+.danger-text-button:hover,
+.danger-text-button:active {
+  background: var(--error-50);
+}
+
+.button-danger {
+  height: var(--tap);
+  padding: 0 18px;
+  border: 0;
+  border-radius: var(--radius);
+  background: var(--error);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 120ms var(--ease-out);
+}
+
+.button-danger:active {
+  transform: scale(0.985);
+}
+
+.button-danger:focus-visible {
+  outline-color: var(--error);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Inline name editor (new batch / rename batch): unrolls open in place */
+.inline-editor-wrap {
+  display: grid;
+  animation: row-unroll 280ms var(--ease-out);
+}
+
+.inline-editor {
+  min-height: 0;
+  padding: 14px;
+  background: var(--teal-50);
+  border-radius: var(--radius);
+  animation: clip-while-moving 280ms;
+}
+
+.inline-editor-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.button-small {
+  height: var(--tap);
+  font-size: 1rem;
+}
+
+@keyframes confirm-open {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+}
+
+/* The world's row motion, shared: rows unroll open and roll shut.
+   The element is a one-row grid; its child clips only while it moves. */
+.row-motion {
+  display: grid;
+  grid-template-rows: 1fr;
+}
+
+.row-motion > * {
+  min-height: 0;
+}
+
+.row-motion.is-entering {
+  animation: row-unroll 280ms var(--ease-out);
+}
+
+.row-motion.is-leaving {
+  animation: row-roll-up 200ms ease-in forwards;
+}
+
+.row-motion.is-entering > *,
+.row-motion.is-leaving > * {
+  overflow: hidden;
+}
+
+@keyframes row-unroll {
+  from {
+    grid-template-rows: 0fr;
+    opacity: 0;
+  }
+  to {
+    grid-template-rows: 1fr;
+    opacity: 1;
+  }
+}
+
+@keyframes row-roll-up {
+  from {
+    grid-template-rows: 1fr;
+    opacity: 1;
+  }
+  to {
+    grid-template-rows: 0fr;
+    opacity: 0;
+  }
+}
+
+/* overflow is discrete: hidden only for the length of the animation, so focus rings aren't clipped after */
+@keyframes clip-while-moving {
+  from,
+  to {
+    overflow: hidden;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .inline-editor-wrap,
+  .inline-editor,
+  .row-motion.is-entering,
+  .row-motion.is-leaving {
+    animation: none;
+  }
+}
+
+/* Polite one-line announcement next to the control it concerns */
+.inline-status {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 8px;
+  color: var(--teal-900);
+  font-size: 0.9375rem;
+  font-weight: 600;
+}
+
+.inline-status:empty {
+  margin-top: 0; /* stays rendered so screen readers keep watching it */
+}
+
+/* Inline delete confirmation (student form, manage batches) */
+.delete-confirm {
+  padding: 14px;
+  background: var(--error-50);
+  border-radius: var(--radius);
+  animation: confirm-open 200ms var(--ease-out);
+}
+
+.delete-confirm-text {
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.delete-confirm-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .delete-confirm {
+    animation-name: fade-in;
+  }
+}
+
+/* Tappable chips (Message batch templates, Settings placeholders) and a multi-line text input */
+.template-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.template-chip {
+  min-height: var(--tap);
+  padding: 0 14px;
+  border: 1.5px solid var(--teal);
+  border-radius: var(--radius);
+  background: var(--page);
+  color: var(--teal);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 160ms var(--ease-out);
+}
+
+.template-chip:hover {
+  background: var(--teal-50);
+}
+
+.template-chip:active {
+  background: var(--teal-100);
+}
+
+.text-area {
+  height: auto;
+  min-height: 11rem;
+  padding: 12px 14px;
+  line-height: 1.45;
+  resize: vertical;
+}
