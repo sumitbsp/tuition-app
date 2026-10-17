@@ -71,7 +71,7 @@ Every screen change runs inside `transition()` in `App.tsx`: a view transition w
 | `src/main.tsx` | React entry point; imports the fonts and global CSS |
 | `src/index.css` | Design tokens (`--teal`, `--marigold`, …), reset, focus ring, `.column` |
 | `src/App.tsx` | Screen state and history navigation, view transitions, save and delete (`commit`), returning focus, which batches are open |
-| `src/components/ChapterBand.tsx` + `.css` | Shared teal band (heading, subtitle, marigold numeral) and **all band motion**: the opening, the chapter turn, and the reduced-motion fallbacks |
+| `src/components/ChapterBand.tsx` + `.css` | Shared teal band (heading, subtitle, the app mark on Setup) and **all band motion**: the opening, the chapter turn, and the reduced-motion fallbacks |
 | `src/components/Field.tsx` | `TextField` (optional ₹-style prefix), `SelectField`, `FieldError`. Wires label, error and help with `aria-describedby` |
 | `src/components/form.css` | Shared form and screen styles: sections, inputs, notes, errors, buttons (primary, secondary, danger), dock |
 | `src/lib/appData.ts` | Data types (`AppData` v2, `Student`), load/save and the v1→v2 migration, validators, `formatRupees`, `formatClass`, `studentsInBatch` |
@@ -124,14 +124,14 @@ Every screen change runs inside `transition()` in `App.tsx`: a view transition w
 **Motion** (D-013):
 - **Opening.** When Setup mounts, `ChapterBand` gets `opening`. The band unrolls (clip-path, 520ms), the heading settles (starting at 140ms), and the "1" prints upward (starting at 300ms). The form is usable throughout.
 - **Batch rows.** New rows unroll in place (`grid-template-rows` from 0fr to 1fr, 280ms) and removed rows roll shut (200ms).
-- **Chapter turn.** On a successful save, `App.completeSetup` wraps the screen swap in `document.startViewTransition`. The band (`view-transition-name: chapter-band`) holds its place, the heading and numeral (`chapter-text`, `chapter-numeral`) lift out and the new ones rise in, and the rest crossfades. Home has no numeral, so the "1" simply turns out. Focus then moves to Home's heading.
+- **Chapter turn.** On a successful save, `App.completeSetup` wraps the screen swap in `document.startViewTransition`. The band (`view-transition-name: chapter-band`) holds its place, the heading (`chapter-text`) lifts out and Home's rises in, the Setup app mark (`chapter-mark`) lifts out, and the rest crossfades. Home has no mark. Focus then moves to Home's heading.
 - **Reduced motion.** With reduced motion turned on, all of the above become short fades or instant changes. Browsers without View Transitions swap screens instantly.
 
 ### 5.2 Home: fees by month
 
 **Files:** `src/screens/HomeScreen.tsx`, `src/lib/fees.ts`, `src/components/{MonthSwitcher,FilterTabs,Toast}.tsx`
 
-- **Band:** "Hello, {first name}" with a **month switcher** (‹ October 2026 ›). It runs from the earliest month any student joined up to the current month; the arrows are disabled at the ends. `App` keeps the selected month and clamps it if the range shrinks. There is no numeral.
+- **Band:** "Hello, {first name}" with a **month switcher** (‹ October 2026 ›). It runs from the earliest month any student joined up to the current month; the arrows are disabled at the ends. `App` keeps the selected month and clamps it if the range shrinks. There is no app mark.
 - **Confirmation line:** a `role="status"` line, e.g. "Added Aarav Mehta.", after a student is saved or deleted.
 - **No students at all:** shows "Add your first student", a marigold Note, and a full-width **Add student** button at the bottom. The month switcher, summary, tabs and "+" button are hidden in this state.
 - **Fee status** (`feeStatus`, D-027): each month's fee is due on the student's due day, or on the month's last day when the month is shorter. **Paid** means a payment is recorded. **Due** means unpaid with the due date today or earlier. **Upcoming** means unpaid with the due date still ahead. Only the current month can have upcoming fees.

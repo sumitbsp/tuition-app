@@ -2,8 +2,8 @@ import type { ReactNode, Ref } from 'react'
 import './ChapterBand.css'
 
 type Props = {
-  /** The marigold chapter-opener numeral (Setup only). Decorative; hidden from assistive tech. */
-  numeral?: string
+  /** Shows the app mark at the band's right (Setup only). Decorative; hidden from assistive tech. */
+  mark?: boolean
   title: string
   subtitle?: string
   /** Plays the first-launch "print in" sequence when the band mounts. */
@@ -16,7 +16,7 @@ type Props = {
 
 // The teal chapter band shared by every screen. Its view-transition names
 // keep it in place while screens change underneath it (see ChapterBand.css).
-export default function ChapterBand({ numeral, title, subtitle, opening, titleRef, children }: Props) {
+export default function ChapterBand({ mark, title, subtitle, opening, titleRef, children }: Props) {
   return (
     <header className={`chapter-band${opening ? ' is-opening' : ''}`}>
       <div className="column chapter-band-inner">
@@ -27,11 +27,7 @@ export default function ChapterBand({ numeral, title, subtitle, opening, titleRe
           {subtitle && <p className="chapter-sub">{subtitle}</p>}
           {children}
         </div>
-        {numeral && (
-          <span className="chapter-numeral" aria-hidden="true">
-            {numeral}
-          </span>
-        )}
+        {mark && <img className="chapter-mark" src="/icons/appIcons/favicon.svg" alt="" width={80} height={80} />}
       </div>
     </header>
   )

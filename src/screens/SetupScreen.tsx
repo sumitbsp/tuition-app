@@ -152,7 +152,7 @@ export default function SetupScreen({ onComplete }: Props) {
   return (
     <div className="screen">
       <ChapterBand
-        numeral="1"
+        mark
         title="Welcome! Let's set up your tuition app."
         subtitle="Four quick sections. It takes about a minute."
         opening

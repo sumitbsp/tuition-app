@@ -6,6 +6,17 @@ A log of why things are built the way they are. Newest entries go at the top. Ea
 
 ---
 
+## D-033: The app mark replaces the Setup chapter numeral
+
+**Status:** Accepted · 2026-10-17
+
+- **Chose:** the Setup band shows the new app icon (`public/icons/appIcons/favicon.svg`, an open book with a rupee coin) where the marigold "1" was. `ChapterBand` takes `mark` instead of `numeral`. On first launch the mark sets in place (fade, 8px rise, 0.9 → 1 scale) instead of printing upward. On the chapter turn to Home it lifts out and fades. Home and every other band carry no mark.
+- **Why:** the user supplied a real app icon. The "1" only made sense as the old placeholder icon, and a stranger can't read it as a brand.
+- **Alternatives:**
+  - The mark on Home too, beside the month switcher: tried and dropped. The user found it odd there, and on 360px phones it had to shrink to about 40px to fit next to the switcher.
+  - Keeping the "1" and using the icon only for install and favicon: leaves two competing marks.
+- **Trade-off:** the icon's slate tile (`#376170`) sits close in tone to the band teal, so it reads through its coin and white pages rather than its edge. The install icons and favicon in `index.html` and the manifest still use the old "1" set until they are switched over.
+
 ## D-032: Settings tab, template reminders, and file backups
 
 **Status:** Accepted · 2026-10-17 · Changes the reminder wording from D-027

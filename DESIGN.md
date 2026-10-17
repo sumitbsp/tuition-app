@@ -303,7 +303,7 @@ components:
 
 **Creative North Star: "The NCERT Textbook"**
 
-Every screen reads like an interior page of the NCERT book the tutor already teaches from: a white offset-print page, a deep teal chapter band across the top, and content set as short numbered sections hanging off a teal gutter number. It is a printed world, not a software one. The page is flat, the ink is near-black, and there are only two inks of colour: NCERT teal for structure and every interactive accent, and marigold as the second ink for the Setup chapter numeral and Note boxes.
+Every screen reads like an interior page of the NCERT book the tutor already teaches from: a white offset-print page, a deep teal chapter band across the top, and content set as short numbered sections hanging off a teal gutter number. It is a printed world, not a software one. The page is flat, the ink is near-black, and there are only two inks of colour: NCERT teal for structure and every interactive accent, and marigold as the second ink for Note boxes and the coin in the app mark.
 
 Density is calm and finite. One reading column, generous tap targets, sections that tell the reader how much is left. The system explicitly refuses the generic SaaS signup made of floating rounded fields on white: fields here are crisp outlined boxes sitting in the text column like answer blanks in a workbook, not cards.
 
@@ -311,7 +311,7 @@ The world is light-only by intent. It is used indoors, by day and under tube lig
 
 **Key Characteristics:**
 - Full-bleed teal chapter band opens every screen, with a heavy Mukta headline in white.
-- A solid marigold display numeral on the band opens the first chapter only (1 on Setup); every other screen's band has no numeral.
+- The app mark (an open book with a marigold rupee coin) opens the first chapter only, at the right of the Setup band; every other screen's band carries just its text.
 - Section numbers (1.1, 1.2... in a chapter, 1 / 2 / 3 in other forms) in teal hang in a 40px gutter left of each section; lists of peers sit on the 20px page edge, unnumbered.
 - Marigold-tinted Note boxes with a bold "Note" lead, no side stripe.
 - 1.5px teal-grey outlined inputs, 52px tall, small 6px corners.
@@ -329,7 +329,7 @@ Two printing inks on white paper: NCERT teal carries structure and interaction, 
 - **Teal Mist** (teal-mist): hover fill for text, icon and secondary buttons, batch headers, student rows, Manage batches rows, filter tabs and the Remind and Mark pending row actions; the fill of the inline name editor panel.
 
 ### Secondary
-- **Marigold** (marigold): the second ink. Used solid only as the Setup chapter numeral on the teal band, where it reads as print.
+- **Marigold** (marigold): the second ink. Solid only inside the app mark, as the rupee coin on the teal band.
 - **Marigold Tint** (marigold-tint): Note box background; the Pending status badge.
 - **Marigold Ink** (marigold-ink): Note box and Pending badge text; the dark brown that keeps marigold surfaces legible. On white it sets one figure only: the Pending amount in the summary strip.
 
@@ -346,7 +346,7 @@ Two printing inks on white paper: NCERT teal carries structure and interaction, 
 ### Named Rules
 **The Two Inks Rule.** Teal and marigold are the only colours on the page beyond ink, rules and red error ink. New accents are not introduced.
 
-**The Marigold Is Print Rule.** Solid marigold appears only on the teal band (the Setup chapter numeral). On white it is always a tint (marigold-tint) carrying marigold-ink text; never set solid marigold as text or as a control on white, which fails legibility. Marigold-ink is the one marigold text colour: on the tint, or on white for the Pending amount.
+**The Marigold Is Print Rule.** Solid marigold appears only on the teal band (the coin in the Setup app mark). On white it is always a tint (marigold-tint) carrying marigold-ink text; never set solid marigold as text or as a control on white, which fails legibility. Marigold-ink is the one marigold text colour: on the tint, or on white for the Pending amount.
 
 **The Teal Means Act Rule.** Every interactive affordance resolves to teal on hover or focus: input borders, text buttons, icon buttons, secondary buttons, batch headers, student rows, filter tabs, row actions, the CTA and the floating Add block. The one exception is delete, which stays in red ink. On a teal or ink ground (the band, the toast) teal cannot read, so controls there go white or teal-wash with a white-alpha hover.
 
@@ -358,7 +358,6 @@ Two printing inks on white paper: NCERT teal carries structure and interaction, 
 **Character:** One Indian-made sans in three weights (400, 600, 800, Latin subset via @fontsource). Heavy 800 does the textbook-heading work; 600 labels; 400 reads.
 
 ### Hierarchy
-- **Display** (800, clamp(5rem, 24vw, 6rem), 0.78, -0.04em, lining numerals): the marigold Setup chapter numeral only.
 - **Headline** (800, clamp(1.75rem, 7.4vw, 2.25rem), 1.08, -0.012em, balanced wrap): the white heading inside the chapter band.
 - **Title** (800, 1.25rem, 1.25): in-page headings: numbered group legends in forms, batch names on Home, the "Your batches" heading on Manage batches (with its count in teal, tabular), the empty-Home title (line-height 1.2). The same cut sets the white month label in the band and the summary figures (tabular, line-height 1.2).
 - **Section number** (800, 0.95rem, tabular numerals, teal): 1.1 to 1.n in a chapter, or 1 / 2 / 3 beside a group legend, hanging in the gutter (dropped 5px to sit on a Title legend's first line).
@@ -383,7 +382,7 @@ Home has no dock. Its one primary action (Add student) is the floating Add block
 
 With students, Home reads top to bottom: the band (holding the month switcher), the confirmation line, the summary strip (16px below), the filter tabs (8px below), then the tab panel of batch groups. Keyboard scrolling keeps focused rows clear of the toast and the Add block: while the block is on screen the page has a 104px (plus safe-area inset) scroll-padding-bottom. The toast is fixed 20px plus the safe-area inset from the bottom; on phones it runs from the left gutter to 84px short of the right gutter, leaving the Add block clear, and from 46rem it spans the column inside the gutters. The same 46rem breakpoint puts each student row on one line. Below the batch list, 20px down, sits the Manage batches text button.
 
-Manage batches reads top to bottom: the band (no numeral), the body 12px below it with the confirmation line, the "Your batches" heading (8px above the list), the hairline list, the last-batch Note box (12px below, when it applies), the Add batch text button (16px below), then a dock holding the single Done CTA.
+Manage batches reads top to bottom: the band (no mark), the body 12px below it with the confirmation line, the "Your batches" heading (8px above the list), the hairline list, the last-batch Note box (12px below, when it applies), the Add batch text button (16px below), then a dock holding the single Done CTA.
 
 **The Thumb Dock Rule.** A screen's one primary action sits full-width in the bottom dock, with a hint line under it that says, in plain words, what is still missing or what will happen. When the task needs a way out, the dock may pair it with Cancel (outlined secondary, 1fr) beside Save (primary, 2fr), hint line still underneath; it is still one primary action.
 
@@ -420,7 +419,7 @@ One small radius (6px) everywhere a corner exists: inputs, buttons, icon buttons
 - **Leading affix:** a unit such as ₹ sits inside the input 14px from the left, muted ink, 600, at the input size; the value starts at 32px and uses tabular numerals.
 
 ### Chapter Band
-One shared component opens every screen; screens never restyle it locally. Full-bleed NCERT teal header: white headline, optional teal-wash supporting line, 32px plus safe-area top and 28px bottom padding. Its content sits in the reading column with the 20px gutter inside the column, so band text aligns with the page column at every width. The marigold display numeral belongs to the first chapter only: Setup passes "1"; Home, the student form and any later screen pass no numeral and the band carries just its text. Where present it sits bottom-right, its baseline tucked to the band edge (-2px). The numeral is decorative and hidden from assistive tech; the headline can take programmatic focus after a screen change, with no visible outline. The band takes optional children, set in its text block under the headline, for controls that belong in the band (Home's month switcher); screens add to the band this way rather than restyling it. The band, its text block and its numeral carry stable view-transition names (chapter-band, chapter-text, chapter-numeral) so they persist across screen changes.
+One shared component opens every screen; screens never restyle it locally. Full-bleed NCERT teal header: white headline, optional teal-wash supporting line, 32px plus safe-area top and 28px bottom padding. Its content sits in the reading column with the 20px gutter inside the column, so band text aligns with the page column at every width. The app mark belongs to the first chapter only: Setup passes `mark`; Home, the student form and any later screen pass nothing and the band carries just its text. Where present it sits at the right, vertically centred on the text block, clamp(56px, 18vw, 80px) square, drawn from `public/icons/appIcons/favicon.svg` with no frame or shadow. It is decorative (empty alt); the headline can take programmatic focus after a screen change, with no visible outline. The band takes optional children, set in its text block under the headline, for controls that belong in the band (Home's month switcher); screens add to the band this way rather than restyling it. The band, its text block and its mark carry stable view-transition names (chapter-band, chapter-text, chapter-mark) so they persist across screen changes.
 
 ### Numbered Section
 A label row with a teal section number hanging in the 40px gutter, then the field, then help text, a Note box or an error. Repeating groups use a fieldset with the number on the legend. In a non-chapter form (the student form) each group is a fieldset whose legend is a Title-size heading with its number 1 / 2 / 3 hanging beside it; the group's fields are unnumbered, 14px below the legend and 20px apart.
@@ -458,7 +457,7 @@ Plain ruled rows on the 20px page edge (no hang): a soft-rule hairline above the
 On phones the row is a grid of 'open badge' over 'actions actions': a Pending row puts Remind and Mark paid two-up across the full width under the details. A Paid row has only Mark pending, tucked under the badge ('open badge' / 'open actions') so the row stays short. From 46rem everything sits on one line: edit button, badge, then actions. Each row carries the view-transition name row-<id> for the list reflow.
 
 ### Manage Batches
-A plain chapter for the groups the tutor teaches: the shared band with no numeral ("Manage batches", with a teal-wash supporting line), then a role=status confirmation line (the Home confirmation line's style: "Renamed ...", "Added batch ...", "Moved N students to ... and deleted batch ..."). Under it the heading "Your batches N" in Title 800 with the count in NCERT teal, tabular, 8px above the list; the heading takes programmatic focus after a delete, with no visible outline.
+A plain chapter for the groups the tutor teaches: the shared band with no mark ("Manage batches", with a teal-wash supporting line), then a role=status confirmation line (the Home confirmation line's style: "Renamed ...", "Added batch ...", "Moved N students to ... and deleted batch ..."). Under it the heading "Your batches N" in Title 800 with the count in NCERT teal, tabular, 8px above the list; the heading takes programmatic focus after a delete, with no visible outline.
 
 - **List:** hairline-ruled, on the 20px page edge: a soft-rule hairline above the list and under each row, 8px padding inside the row so a roll-shut collapses it too.
 - **Rename button:** the whole name area, at least 56px, 6px by 8px padding bled 8px left, 10px gaps: the batch name at 600, 1.0625rem with balanced wrap, then a muted "N students" (small, 400, tabular), then a muted Lucide Pencil (18px) that turns teal on hover. Hover teal-mist, press teal-wash, focus outline inset 2px. It opens the Inline Name Editor in place ("Save name"). Screen readers hear "Rename Name".
@@ -486,15 +485,15 @@ A role=status line at the top of Home announces the last change ("Saved Name."):
 ### Motion
 Motion behaves like print: things unroll, ink prints in, pages turn. Nothing bounces, and nothing ever blocks input. Entrances use the exponential ease-out; exits use a plain ease-in and finish faster than the entrance that follows. Other transitions are 120 to 160ms state changes.
 
-- **First-launch opening (chapter band, about 780ms):** the band unrolls downward (clip-path from the top, 520ms); the headline block settles with a 12px rise and fade (520ms, starting at 140ms); then the numeral prints upward like ink (clip-path from the bottom, 480ms, starting at 300ms). All on the exponential ease-out. The form below is visible and usable throughout. Plays only on the first chapter (Setup).
-- **Chapter turn (Setup to Home, View Transitions):** the band holds its place (group 420ms, ease-out) while the chapter underneath changes. The old headline lifts away (10px up and fade, 200ms ease-in); the new one rises in (12px, 420ms ease-out, 120ms delay). The Setup numeral turns out upward by 30% of its height (240ms ease-in); Home has no numeral, so nothing turns in (a band that did carry one would turn in from 30% below, 460ms ease-out, 160ms delay). Text snapshots draw at natural size, anchored bottom-left, never stretched. Everything else crossfades: out 180ms, in 300ms after 120ms. The state swap is flushed synchronously inside the transition; browsers without View Transitions swap screens instantly.
+- **First-launch opening (chapter band, about 780ms):** the band unrolls downward (clip-path from the top, 520ms); the headline block settles with a 12px rise and fade (520ms, starting at 140ms); then the app mark sets in place (fade, 8px rise and 0.9 to 1 scale, 480ms, starting at 300ms). All on the exponential ease-out. The form below is visible and usable throughout. Plays only on the first chapter (Setup).
+- **Chapter turn (Setup to Home, View Transitions):** the band holds its place (group 420ms, ease-out) while the chapter underneath changes. The old headline lifts away (10px up and fade, 200ms ease-in); the new one rises in (12px, 420ms ease-out, 120ms delay). The Setup app mark lifts out upward by 30% of its height and fades (240ms ease-in); Home has no mark, so nothing comes in. Text snapshots draw at natural size, anchored bottom-left, never stretched. Everything else crossfades: out 180ms, in 300ms after 120ms. The state swap is flushed synchronously inside the transition; browsers without View Transitions swap screens instantly.
 - **List reflow (View Transitions, kind "list"):** when a row changes filter (marking paid on the Pending tab), each row, named row-<id>, slides to its new place (group 280ms, exponential ease-out); a row that leaves fades out (160ms ease-in) and a row that arrives fades in (220ms ease-out). html.vt-list turns off the root crossfade for the duration, so the page itself holds still. Skipped entirely under reduced motion: the list just changes.
 - **Unroll and roll shut (shared row motion):** one shared utility. A row is a one-row grid; entering, it unrolls (row-unroll: grid-template-rows 0fr to 1fr with fade, 280ms, exponential ease-out); leaving, it rolls shut (row-roll-up: 1fr to 0fr with fade, 200ms ease-in, held at the end). Its child clips only while it moves, so focus rings are never cut off after. Adding a repeated row unrolls it in place and focuses its input; removing rolls it shut. Manage batches rows unroll when a batch is added and roll shut before a delete commits (the delete runs when the roll-up ends). The Inline Name Editor unrolls open the same way (0fr to 1fr, clipping only while moving). Batch panels use the same grammar as a transition, without the fade.
 
-**The Fades Only Rule.** Under prefers-reduced-motion nothing moves through space. The band opening becomes a 240ms fade of the headline and numeral; the chapter turn becomes a 160ms fade-out and 240ms fade-in with no group movement; rows, batch panels, Manage batches rows and the Inline Name Editor appear and disappear instantly (a delete commits at once); the list reflow is skipped; the delete confirm and the toast only fade.
+**The Fades Only Rule.** Under prefers-reduced-motion nothing moves through space. The band opening becomes a 240ms fade of the headline and mark; the chapter turn becomes a 160ms fade-out and 240ms fade-in with no group movement; rows, batch panels, Manage batches rows and the Inline Name Editor appear and disappear instantly (a delete commits at once); the list reflow is skipped; the delete confirm and the toast only fade.
 
 ### App Icon and Install Splash
-The app installs standalone, portrait, from a web manifest. Background and theme colour are both NCERT teal, so the install splash and status bar read as the chapter band before the first screen paints. The icon (any, maskable, Apple touch and favicon sizes) is a placeholder mark: a solid marigold Mukta numeral 1 on a full teal field, the chapter numeral as the app's mark. It is provisional; a final mark should keep the teal field and marigold-as-print ink.
+The app installs standalone, portrait, from a web manifest. Background and theme colour are both NCERT teal, so the install splash and status bar read as the chapter band before the first screen paints. The app mark is an open book under a marigold rupee coin on a slate-teal tile (`public/icons/appIcons/`: SVG, 192 and 512 PWA, maskable, Apple touch and favicon). The installed icons in `index.html` and the manifest still point to the old placeholder (a marigold numeral 1 on teal) until they are switched to this set.
 
 ## Do's and Don'ts
 
@@ -514,7 +513,7 @@ The app installs standalone, portrait, from a web manifest. Background and theme
 - **Don't** add a side stripe or border to Note boxes.
 - **Don't** build a dark theme; the world is light-only by intent.
 - **Don't** use large or pill radii; corners are 6px. The floating Add block's 10px outer radius is a knockout exception, not a precedent.
-- **Don't** put a chapter numeral on any band but Setup's.
+- **Don't** put the app mark on any band but Setup's.
 - **Don't** use red ink for anything but errors and delete.
 - **Don't** introduce a second typeface or a third accent colour.
 - **Don't** indent lists on the 40px gutter; it is only for numbered sections.

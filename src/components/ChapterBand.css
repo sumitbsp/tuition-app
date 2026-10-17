@@ -1,4 +1,4 @@
-/* Chapter band: teal page head with the marigold chapter numeral. */
+/* Chapter band: teal page head, with the app mark on Setup. */
 .chapter-band {
   view-transition-name: chapter-band;
   background: var(--teal);
@@ -40,23 +40,20 @@
   font-size: 1rem;
 }
 
-/* Chapter-opener numeral, printed in the world's second ink. */
-.chapter-numeral {
-  view-transition-name: chapter-numeral;
+/* The app mark (book and rupee coin), opening the first chapter only. */
+.chapter-mark {
+  view-transition-name: chapter-mark;
   flex: none;
-  font-size: clamp(5rem, 24vw, 6rem);
-  line-height: 0.78;
-  font-weight: 800;
-  letter-spacing: -0.04em;
-  color: var(--marigold);
-  font-variant-numeric: lining-nums;
-  margin-bottom: -2px;
+  align-self: center;
+  width: clamp(56px, 18vw, 80px);
+  height: auto;
+  aspect-ratio: 1;
 }
 
 /* ---------------------------------------------------------------------------
    1. First-launch opening (~780ms, never blocks input).
-   The band unrolls downward, the heading settles, then the numeral prints
-   upward like ink. The form below is visible and usable throughout.
+   The band unrolls downward, the heading settles, then the mark sets in
+   place. The form below is visible and usable throughout.
    ------------------------------------------------------------------------- */
 .chapter-band.is-opening {
   animation: band-unroll 520ms var(--ease-out) both;
@@ -66,8 +63,8 @@
   animation: text-settle 520ms var(--ease-out) 140ms both;
 }
 
-.chapter-band.is-opening .chapter-numeral {
-  animation: numeral-print 480ms var(--ease-out) 300ms both;
+.chapter-band.is-opening .chapter-mark {
+  animation: mark-set 480ms var(--ease-out) 300ms both;
 }
 
 @keyframes band-unroll {
@@ -86,12 +83,10 @@
   }
 }
 
-@keyframes numeral-print {
+@keyframes mark-set {
   from {
-    clip-path: inset(100% 0 0 0);
-  }
-  to {
-    clip-path: inset(0);
+    opacity: 0;
+    transform: translateY(8px) scale(0.9);
   }
 }
 
@@ -109,8 +104,8 @@
 
 /* ---------------------------------------------------------------------------
    2. Turning the chapter: Setup → Home (view transition).
-   The band holds its place; the old numeral and heading lift away and the
-   next chapter's rise in. Everything else crossfades quickly.
+   The band holds its place; the old heading and the Setup mark lift away
+   and the next heading rises in. Everything else crossfades quickly.
    ------------------------------------------------------------------------- */
 ::view-transition-group(chapter-band) {
   animation-duration: 420ms;
@@ -127,9 +122,7 @@
 
 /* Draw text snapshots at their natural size instead of stretching them. */
 ::view-transition-old(chapter-text),
-::view-transition-new(chapter-text),
-::view-transition-old(chapter-numeral),
-::view-transition-new(chapter-numeral) {
+::view-transition-new(chapter-text) {
   height: 100%;
   object-fit: none;
   object-position: left bottom;
@@ -143,18 +136,22 @@
   animation: rise-in 420ms var(--ease-out) 120ms both;
 }
 
-::view-transition-old(chapter-numeral) {
-  animation: numeral-turn-out 240ms ease-in both;
-}
-
-::view-transition-new(chapter-numeral) {
-  animation: numeral-turn-in 460ms var(--ease-out) 160ms both;
+/* Home has no mark, so the Setup one only leaves. */
+::view-transition-old(chapter-mark) {
+  animation: mark-out 240ms ease-in both;
 }
 
 @keyframes lift-away {
   to {
     opacity: 0;
     transform: translateY(-10px);
+  }
+}
+
+@keyframes mark-out {
+  to {
+    opacity: 0;
+    transform: translateY(-30%);
   }
 }
 
@@ -165,20 +162,6 @@
   }
 }
 
-@keyframes numeral-turn-out {
-  to {
-    opacity: 0;
-    transform: translateY(-30%);
-  }
-}
-
-@keyframes numeral-turn-in {
-  from {
-    opacity: 0;
-    transform: translateY(30%);
-  }
-}
-
 /* Reduced motion: no spatial movement; keep gentle fades so the change still reads. */
 @media (prefers-reduced-motion: reduce) {
   .chapter-band.is-opening {
@@ -186,7 +169,7 @@
   }
 
   .chapter-band.is-opening .chapter-text,
-  .chapter-band.is-opening .chapter-numeral {
+  .chapter-band.is-opening .chapter-mark {
     animation: fade-in 240ms ease-out both;
   }
 
@@ -195,12 +178,11 @@
   }
 
   ::view-transition-old(chapter-text),
-  ::view-transition-old(chapter-numeral) {
+  ::view-transition-old(chapter-mark) {
     animation: fade-out 160ms ease-out both;
   }
 
-  ::view-transition-new(chapter-text),
-  ::view-transition-new(chapter-numeral) {
+  ::view-transition-new(chapter-text) {
     animation: fade-in 240ms ease-out both;
   }
 }
